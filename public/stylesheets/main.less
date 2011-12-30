@@ -126,9 +126,10 @@ header {
             }
 
             .coda-nav {
-                position: absolute;bottom: 48px;
-                 z-index: 999;
-                }
+                position: absolute;
+                bottom: 36px;
+                z-index: 999;
+            }
 
 
             .panel {
@@ -142,6 +143,10 @@ header {
                             height: 380px;
                             float: left;
                             position:relative;
+                        }
+                        
+                        h2 {
+                            text-align:center;
                         }
 
                         p {
@@ -157,10 +162,46 @@ header {
 
             }
 
+
+            .coda-nav ul {
+                padding: 0;
+                margin: 0;
+            }
+            .coda-nav {
+
+                h3 {
+                     color: @grayLight;
+                     .NormalTextShadow;
+
+                    &:hover {
+                           color: lighten(@grayLight,10%);
+                           .CustomLighten;
+                           position: relative;
+                           top:1px;
+                           right: 1px;
+                    }
+                }
+
+                img {
+
+
+                    &:hover {
+                           position: relative;
+                           top:1px;
+                           right: 1px;
+                    }
+                }
+            }
+
+
             .coda-nav ul li a { color: @grayLight;
+
 
                 .NormalTextShadow;
                 display: block; float: left; margin-right: 1px; padding: 3px 6px; text-decoration: none;
+
+                width: 174px;
+                text-align: center;
 
                 &:hover {
                     color: lighten(@grayLight,10%);

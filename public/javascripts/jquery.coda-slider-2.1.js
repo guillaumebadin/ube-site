@@ -155,7 +155,7 @@ $.fn.codaSlider = function(settings) {
 			ul = $('#coda-nav-' + sliderCount + ' ul');
 			// Create the nav items
 			$('.panel', slider).each(function(n) {
-				ul.append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + $(this).find(settings.panelTitleSelector).text() + '</a></li>');												
+				ul.append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + $(this).find(settings.panelTitleSelector).html() + '</a></li>');
 			});
 			navContainerWidth = slider.width() + slider.siblings('.coda-nav-left').width() + slider.siblings('.coda-nav-right').width();
 			ul.parent().css({ "width": navContainerWidth });

@@ -1,0 +1,76 @@
+public/uploads/*
+
+# use glob syntax.
+syntax: glob
+*.ser
+*.class
+*~
+*.bak
+*.off
+*.old
+.DS_Store
+
+# logs
+derby.log
+
+# eclipse conf file
+eclipse
+.settings
+.classpath
+.project
+.manager
+.externalToolBuilders
+
+# ensime/emacs conf files
+.ensime
+.scala_dependencies
+
+# building
+target
+null
+tmp*
+dist
+test-output
+
+# sbt
+target
+lib_managed
+src_managed
+project/boot
+
+# other scm
+.svn
+.CVS
+.hg*
+
+# switch to regexp syntax.
+#  syntax: regexp
+#  ^\.pc/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea
+
+#android
+/bin
+/Front/bin
+/gen
+/Front/gen
+
+#play
+/tmp
+/test-result
+/logs
+/out
+
+
+## Deploy on heroky git push heroku master
+
+
+
+
+
+
+
