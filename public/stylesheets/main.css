@@ -2465,11 +2465,16 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
+html {
+  background-color: #000000;
+}
 body {
-  height: 100%;
-  background-color: white;
+  background-color: #f5f5f5;
 }
 .OrangeTextShadow {
+  text-shadow: #233133 -1px -1px 1px;
+}
+.NormalTextShadow {
   text-shadow: #233133 -1px -1px 1px;
 }
 h1,
@@ -2479,7 +2484,7 @@ h4 {
   color: #f58220;
   text-shadow: #233133 -1px -1px 1px;
 }
-.customLighten {
+.CustomLighten {
   text-shadow: 0 0 10px #ffffff;
 }
 a {
@@ -2492,8 +2497,24 @@ a:hover {
   text-shadow: 0 0 10px #ffffff;
 }
 header {
-  background-image: url("../images/header_line.png");
+  /*background-image: url("../images/header_line.png");*/
+
+  /*background-repeat: repeat-x;*/
+
+  background-color: #808080;
   background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#000000), to(#808080));
+  background-image: -moz-linear-gradient(top, #000000, #808080);
+  background-image: -ms-linear-gradient(top, #000000, #808080);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #808080));
+  background-image: -webkit-linear-gradient(top, #000000, #808080);
+  background-image: -o-linear-gradient(top, #000000, #808080);
+  background-image: linear-gradient(top, #000000, #808080);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#808080', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #808080 #808080 #595959;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid #f58220;
   position: absolute;
   top: 0;
   left: 0;
@@ -2525,22 +2546,137 @@ header ul a {
   color: #f58220;
   font-size: 18px;
 }
+#main-content {
+  background-color: #f5f5f5;
+  min-height: 200px;
+}
+#main-content p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 36px;
+}
+#main-content #index {
+  min-height: 800px;
+}
+#main-content #index #presentation {
+  zoom: 1;
+  margin-top: 2%;
+}
+#main-content #index #presentation:before, #main-content #index #presentation:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+#main-content #index #presentation:after {
+  clear: both;
+}
+#main-content #index #presentation img {
+  max-width: 60%;
+  float: left;
+}
+#main-content #index #presentation p {
+  max-width: 40%;
+  float: left;
+  text-align: justify;
+  margin-left: 4%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 36px;
+}
+#main-content #index #slider {
+  background-image: url("../images/fond_carrousel.png");
+  width: 1000px;
+  height: 500px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#main-content #index #slider p, #main-content #index #slider a {
+  text-shadow: #233133 -1px -1px 1px;
+}
+#main-content #index #slider .coda-nav {
+  position: absolute;
+  bottom: 36px;
+  z-index: 999;
+}
+#main-content #index #slider .panel {
+  height: 400px;
+  position: relative;
+}
+#main-content #index #slider .panel img {
+  float: left;
+}
+#main-content #index #slider .panel .carroussel_desc {
+  padding-left: 16px;
+  padding-top: 8px;
+  width: 300px;
+  height: 380px;
+  float: left;
+  position: relative;
+}
+#main-content #index #slider .panel h2 {
+  text-align: center;
+}
+#main-content #index #slider .panel p {
+  color: #bfbfbf;
+}
+#main-content #index #slider .panel a {
+  position: absolute;
+  bottom: 18px;
+  right: 0;
+}
+#main-content #index .coda-nav ul {
+  padding: 0;
+  margin: 0;
+}
+#main-content #index .coda-nav h3 {
+  color: #bfbfbf;
+  text-shadow: #233133 -1px -1px 1px;
+}
+#main-content #index .coda-nav h3:hover {
+  color: #d9d9d9;
+  text-shadow: 0 0 10px #ffffff;
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+#main-content #index .coda-nav img:hover {
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+#main-content #index .coda-nav ul li a {
+  color: #bfbfbf;
+  text-shadow: #233133 -1px -1px 1px;
+  display: block;
+  float: left;
+  margin-right: 1px;
+  padding: 3px 6px;
+  text-decoration: none;
+  width: 174px;
+  text-align: center;
+}
+#main-content #index .coda-nav ul li a:hover {
+  color: #d9d9d9;
+  text-shadow: 0 0 10px #ffffff;
+}
 /*Footer*/
 footer {
-  border-top: 2px solid #f58220;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  border-top: 2px solid #f58220 !important;
   background-color: #000000;
-  background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#808080), color-stop(1%, #808080), to(#000000));
-  background-image: -webkit-linear-gradient(#808080, #808080 1%, #000000);
-  background-image: -moz-linear-gradient(top, #808080, #808080 1%, #000000);
-  background-image: -ms-linear-gradient(#808080, #808080 1%, #000000);
-  background-image: -o-linear-gradient(#808080, #808080 1%, #000000);
-  background-image: linear-gradient(#808080, #808080 1%, #000000);
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#808080), to(#000000));
+  background-image: -moz-linear-gradient(top, #808080, #000000);
+  background-image: -ms-linear-gradient(top, #808080, #000000);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #808080), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(top, #808080, #000000);
+  background-image: -o-linear-gradient(top, #808080, #000000);
+  background-image: linear-gradient(top, #808080, #000000);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#808080', endColorstr='#000000', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #000000 #000000 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 footer a, footer h4 {
   color: #a6a6a6;
@@ -2562,4 +2698,185 @@ footer #footer_link ol > li + li {
 footer #copyright {
   font-size: 18px;
   text-align: center;
+}
+/*
+	jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider
+	Copyright (c) 2009 Niall Doherty
+	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+*/
+/* Insignificant stuff, for demo purposes */
+.panel h2.title {
+  margin-bottom: 10px;
+}
+noscript div {
+  background: #ccc;
+  border: 1px solid #900;
+  margin: 20px 0;
+  padding: 15px;
+}
+/* Most common stuff you'll need to change */
+.loading {
+  display: none;
+}
+.coda-slider-wrapper {
+  padding: 18px 0;
+}
+/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+.coda-slider-no-js .coda-slider {
+  height: 200px;
+  overflow: auto !important;
+  padding-right: 20px;
+}
+/* Change the width of the entire slider (without dynamic arrows) */
+.coda-slider, .coda-slider .panel {
+  width: 1000px;
+  height: 500px;
+}
+/* Change margin and width of the slider (with dynamic arrows) */
+.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel {
+  width: 600px;
+}
+.coda-slider-wrapper.arrows .coda-slider {
+  margin: 0 10px;
+}
+/* Arrow styling */
+/* Tab nav */
+/* Panel padding */
+.coda-slider .panel-wrapper {
+  padding: 20px;
+}
+/* Preloader */
+.coda-slider p.loading {
+  padding: 20px;
+  text-align: center;
+}
+/* Don't change anything below here unless you know what you're doing */
+/* Tabbed nav */
+.coda-nav ul {
+  clear: both;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+}
+.coda-nav ul li {
+  display: inline;
+}
+/* Miscellaneous */
+.coda-slider-wrapper {
+  clear: both;
+  overflow: hidden;
+  padding: 18px 20px 20px 20px;
+  width: 900px;
+  height: 380px;
+  margin-left: 18px;
+}
+.coda-slider {
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.coda-slider .panel {
+  display: block;
+  float: left;
+}
+.coda-slider .panel-container {
+  position: relative;
+}
+.coda-nav-left, .coda-nav-right {
+  float: left;
+}
+.coda-nav-left a, .coda-nav-right a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.ube-slider-tab {
+  display: none;
+}
+div.container {
+  margin: 40px auto;
+  width: 960px;
+}
+a.cupid-green {
+  /*background-color: #7fbf4d;*/
+
+  display: block;
+  color: #ffffff !important;
+  font-size: 1em !important;
+  background-color: #7fbf4d;
+  border: 1px solid #63a62f;
+  border-radius: 3px;
+  border-bottom-color: #5b992b;
+  border-bottom: 1px solid #5b992b;
+  line-height: 1;
+  padding: 7px 10px 8px 10px;
+  font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  border-style: solid;
+  position: absolute;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #4c9021 !important;
+  text-align: center;
+  cursor: pointer;
+}
+a.cupid-green:hover {
+  background-color: #76b347;
+  cursor: pointer;
+}
+a.cupid-green-contact {
+  /*background-color: #7fbf4d;*/
+
+  display: block;
+  color: #ffffff !important;
+  font-size: 1em !important;
+  background-color: #7fbf4d;
+  border: 1px solid #63a62f;
+  border-radius: 3px;
+  border-bottom-color: #5b992b;
+  border-bottom: 1px solid #5b992b;
+  line-height: 1;
+  padding: 7px 10px 8px 10px;
+  font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  border-style: solid;
+  position: absolute;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #4c9021;
+  text-align: center;
+  cursor: pointer;
+}
+a.cupid-green-contact:hover {
+  background-color: #76b347;
+  cursor: pointer;
+}
+a.contact_left {
+  position: absolute;
+  bottom: 22px;
+  left: 254px;
+}
+a.contact_right {
+  left: 800px;
+  margin-top: 10px;
+}
+a.contact-page {
+  position: absolute;
+  top: 750px;
+  left: 360px;
+  width: 130px;
+}
+a.mobile-page {
+  position: absolute;
+  top: 1275px;
+  left: 360px;
+  width: 130px;
+}
+a.app-page {
+  position: absolute;
+  top: 1950px;
+  left: 360px;
+  width: 130px;
+}
+a.web-page {
+  position: absolute;
+  top: 490px;
+  left: 250px;
+  width: 130px;
 }
