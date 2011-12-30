@@ -11,7 +11,9 @@
 
 /* Most common stuff you'll need to change */
     .loading {display: none;}
-	.coda-slider-wrapper { padding: 20px 0 }
+	.coda-slider-wrapper { padding: 18px 0;
+
+	 }
 	.coda-slider  {}
 
 	/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
@@ -44,9 +46,16 @@
 	.coda-nav ul li { display: inline }
 
 	/* Miscellaneous */
-	.coda-slider-wrapper { clear: both; overflow: auto }
+	.coda-slider-wrapper { clear: both; overflow: hidden;
+        padding: 18px 20px 20px 20px;
+        width: 900px;
+        height: 380px;
+        margin-left: 18px;
+    }
+
 	.coda-slider { float: left; overflow: hidden; position: relative }
-	.coda-slider .panel { display: block; float: left }
+	.coda-slider .panel { display: block; float: left;}
+
 	.coda-slider .panel-container { position: relative }
 	.coda-nav-left, .coda-nav-right { float: left }
 	.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none }

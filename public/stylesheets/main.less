@@ -130,17 +130,29 @@ header {
                  z-index: 999;
                 }
 
+
             .panel {
+                        height: 400px;
+                        position:relative;
                         img {float: left; }
 
                         .carroussel_desc {
-                            width: 340px;
+                            padding-left: 8px;
+                            width: 300px;
+                            height: 380px;
                             float: left;
+                            position:relative;
                         }
 
                         p {
                             color:@grayLight;
-                           }
+                           }  
+                           
+                        a {
+                            position:absolute;
+                            bottom:8px;
+                            right:0;
+                        }
                     }
 
             }
