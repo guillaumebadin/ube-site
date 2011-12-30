@@ -105,6 +105,8 @@ header {
         #presentation {
             .clearfix;
             margin-top:2%;
+            position: relative;
+            left: 10px;
 
             img {max-width:60%;float: left;}
 
@@ -113,6 +115,8 @@ header {
                 margin-left: 4%;
                 #font.sans-serif(normal,18px,36px);
             }
+
+
         }
 
         #slider {
@@ -133,33 +137,33 @@ header {
 
 
             .panel {
-                        height: 400px;
+                    height: 400px;
+                    position:relative;
+                    img {float: left; }
+
+                    .carroussel_desc {
+                        padding-left: 16px;
+                        padding-top: 8px;
+                        width: 300px;
+                        height: 380px;
+                        float: left;
                         position:relative;
-                        img {float: left; }
-
-                        .carroussel_desc {
-                            padding-left: 16px;
-                            padding-top: 8px;
-                            width: 300px;
-                            height: 380px;
-                            float: left;
-                            position:relative;
-                        }
-                        
-                        h2 {
-                            text-align:center;
-                        }
-
-                        p {
-                            color:@grayLight;
-                           }  
-                           
-                        a {
-                            position:absolute;
-                            bottom:18px;
-                            right:0;
-                        }
                     }
+
+                    h2 {
+                        text-align:center;
+                    }
+
+                    p {
+                        color:@grayLight;
+                       }
+
+                    a {
+                        position:absolute;
+                        bottom:18px;
+                        right:0;
+                    }
+                }
 
             }
 
