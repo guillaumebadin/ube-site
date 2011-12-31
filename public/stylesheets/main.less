@@ -103,7 +103,7 @@ header {
     min-height: 200px;
 
     p {
-         #font.sans-serif(normal,18px,36px);
+         #font.sans-serif(normal,18px,23px);
     }
 
     #index {
@@ -250,6 +250,35 @@ header {
     }
 
 
+    #mobile {
+        .block {
+
+            h1 {text-align: center;}
+
+            #mobileTopPage {
+                .clearfix;
+                margin-top: 40px;
+            }
+
+
+            #leftMobile {
+                float: left;
+                width: 50%;
+            }
+
+            #kiosque {
+                float: right;
+            }
+               
+
+            p + p {
+                margin-top: 50px;
+            }
+
+        }
+    }
+
+
 }
 
 
@@ -280,6 +309,8 @@ footer {
 
     #footer_link {
         padding:10px 0 40px 0;
+        position: relative;
+        left: 8px;
 
         li,ol,ul {
             list-style: none;

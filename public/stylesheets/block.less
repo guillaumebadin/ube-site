@@ -1,0 +1,33 @@
+
+#main-content {
+    .block {
+
+        @radius:30px;
+        @shadowSize:8px;
+        @shadow:@shadowSize @shadowSize 20px rgba(0,0,0,0.65);
+        @ubeGray:#4C4C4D;
+        @textColor:#BFBFBF;
+
+        // We move the block because of shadow
+        position: relative;
+        left: @shadowSize;
+
+        .clearfix;
+        .border-radius(@radius);
+        background-color:@ubeGray;
+
+        padding: @radius;
+
+        .box-shadow(@shadow);
+
+
+
+        p {
+            .NormalTextShadow();
+            color: @textColor;
+            text-align: justify;
+
+        }
+
+    }
+}
