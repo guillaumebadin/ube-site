@@ -1,1 +1,1 @@
-web:    play start --%prod --http.port=80
+web:    play run --%prod --http.port=80
