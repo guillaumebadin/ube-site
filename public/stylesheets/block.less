@@ -1,12 +1,18 @@
 
 #main-content {
+
+
+    @radius:30px;
+    @shadowSize:8px;
+    @shadow:@shadowSize @shadowSize 20px rgba(0,0,0,0.65);
+    @ubeGray:#4C4C4D;
+    @ubeBlack:#404040;
+    @ubeLight:whitesmoke;
+    @textColor:#BFBFBF;
+
+
     .block {
 
-        @radius:30px;
-        @shadowSize:8px;
-        @shadow:@shadowSize @shadowSize 20px rgba(0,0,0,0.65);
-        @ubeGray:#4C4C4D;
-        @textColor:#BFBFBF;
 
         // We move the block because of shadow
         position: relative;
@@ -34,6 +40,30 @@
 
     .block + .block {
         margin-top:50px;
+    }
+
+    .block-light {
+        .clearfix;
+        .border-radius(@radius);
+        background-color:@ubeLight;
+        padding: @radius;
+
+        p { color: @ubeBlack; text-shadow: none; }
+         
+        a {color: @blue;
+        
+            &:hover {
+                text-shadow: 0 0 10px white;
+                color: lighten(@blue,10%);
+            }
+        }
+
+
+        &.info_address {
+
+            position: absolute;
+            right: @radius;
+        }
     }
 
 }

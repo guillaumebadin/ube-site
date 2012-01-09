@@ -33,17 +33,12 @@
 #{get 'moreStyles' /}
     <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"
-            charset="${_response_encoding}"></script>
+    *{<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"}*
+            *{charset="${_response_encoding}"></script>}*
 
+    <script src="@{'public/javascripts/jquery-1.7.1.min.js'}" type="text/javascript"></script>
 #{get 'moreScripts' /}
 
-
-    *{We download images}*
-    <link rel="prefetch" href="@{'/public/images/logo_accueuil.png'}" />
-    <link rel="prefetch" href="@{'/public/images/fond_carrousel.png'}" />
-    <link rel="prefetch" href="@{'/public/images/kiosques.png'}" />
-    <link rel="prefetch" href="@{'/public/images/shapes_background_texts.png'}" />
 
 </head>
 <body>
