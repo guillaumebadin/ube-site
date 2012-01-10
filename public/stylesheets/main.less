@@ -10,6 +10,7 @@
 
 html {
     background-color:#000000;
+
 }
 
 body {
@@ -110,7 +111,7 @@ header {
     background-color:#f5f5f5;
     min-height: 200px;
 
-    p {
+    p,li{
          #font.sans-serif(normal,18px,23px);
     }
 
@@ -356,6 +357,7 @@ header {
 
     #contact {
 
+
           #contactInfo {
 
             h1 {
@@ -388,6 +390,83 @@ header {
             width: 890px;
             height: 100px;
           }
+    }
+
+
+    #ref {
+
+        img {float: left;margin-right: 14px;}
+
+        .block {
+            cursor: pointer;
+
+            &:hover {
+                cursor: pointer;
+                position:relative;
+                left: 8px;
+                top: 4px;
+                background-color:lighten(@ubeGray,10%);
+            }
+        }  
+
+
+
+
+
+    }
+
+    #appOcalypse {
+
+        img {
+            display: block;
+            margin: auto;
+            position: relative;
+            left:22px;
+        }
+
+        .block {
+            display: table;
+            >h1 {display: table-row;text-align: center;}
+            >img {display: table-row;}
+        }
+
+
+        .row {
+            display: table-row;
+
+        }
+
+
+        .cell {
+            display: table-cell;
+            padding: 14px;
+        }
+
+        #rowPres > .cell {
+            width: 50%;
+        } 
+        
+        p {
+            text-align: justify;
+        }
+                 
+        .center {
+            display: block;
+            margin: auto;
+            width: 130px;
+            position: relative;
+            left:22px;
+        }
+
+
+
+
+
+
+
+
+
+
     }
 
 }
@@ -433,7 +512,6 @@ footer {
             margin-left:20px;
         }
     }
-
 
       div.container {
             margin-top: 0;

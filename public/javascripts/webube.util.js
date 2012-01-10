@@ -35,12 +35,26 @@ var UbeMenu = function(){
         return this;
     }
 
+    var applyDataUbeLink = function()  {
+        $('[data-ube-link]').each(function(index,item){
+
+            var url = $(item).attr('data-ube-link');
+
+            $(item).click(function(){
+
+
+            });
+
+        });
+    }
+
 
     return {
         /**
          * You must use this method with data-link attribute
          * @param classToAdd
          */
-        updateMenu:updateMenu
+        updateMenu:updateMenu,
+        applyDataUbeLink:applyDataUbeLink
     }
 }();
