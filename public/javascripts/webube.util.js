@@ -49,6 +49,8 @@ var UbeMenu = function(){
     }
 
 
+
+
     return {
         /**
          * You must use this method with data-link attribute
@@ -58,3 +60,64 @@ var UbeMenu = function(){
         applyDataUbeLink:applyDataUbeLink
     }
 }();
+
+var UBE_AJAX = (function() {
+
+    'use strict';
+
+    /**
+     * This method post a form via ajax.
+     * @param idToAttach
+     * @param successCallback
+     */
+    function postForm(idToAttach, successCallback) {
+
+
+        var urlToPost = $(idToAttach).attr('action');
+
+        var sendButton = $(idToAttach).find("[type='submit']").get(0);
+
+        sendButton.click(function(event){
+
+            event.preventDefault();
+
+        });
+
+        /* Send the data using post and call successCallback */
+        $.post(urlToPost, UBE_AJAX.formToJson(idToAttach), successCallback);
+
+    }
+
+
+    function formToJson(idFrom) {
+
+        var form = $(idFrom);
+
+        var o = {};
+        var a = form.serialize();
+
+        var tab = a.split('&');
+
+        $.each(tab, function(index, elem) {
+            var ele = elem.split('=');
+
+            o[ele[0]] = ele[1];
+        });
+        return o;
+    }
+
+
+    return {
+        /**
+         * This method post a form via ajax.
+         * @param idToAttach
+         * @param successCallback
+         */
+        postForm:postForm,
+        formToJson:formToJson
+    }
+
+})();
+
+
+

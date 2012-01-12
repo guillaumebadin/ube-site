@@ -56,24 +56,28 @@
             </p>
         </div>
 
-        <form action="#">
+    #{form @Contact.sendMessage(), id:'sendMessage'}
 
-            <fieldset>
+        <fieldset>
 
-                <input class="span8" type="text" placeholder="Votre nom..."/>
-            </fieldset>
+            <input class="span8" type="text" name="name" placeholder="Votre nom..."
+                   required
+                    />
+        </fieldset>
 
-            <fieldset>
-                <input class="span8" type="email" placeholder="Votre email..."/>
-            </fieldset>
+        <fieldset>
+            <input class="span8" type="email" name="email" placeholder="Votre email..."
+                   required
+                    />
+        </fieldset>
 
-            <fieldset>
-                <textarea id="contactTextArea" placeholder="Tapez votre message"></textarea>
-            </fieldset>
+        <fieldset>
+            <textarea id="contactTextArea" name="message" placeholder="Tapez votre message" required></textarea>
+        </fieldset>
 
 
-            <input type="submit" class="btn success" value="Envoyez!!!"/>
-        </form>
+        <input id="send" type="submit" class="btn success" value="Envoyez!!!"/>
+    #{/form}
 
 
     </div>
@@ -168,3 +172,46 @@
 
 
 </div>
+
+
+<!-- sample modal content -->
+<div id="modal-from-dom" class="modal hide fade">
+    <div class="modal-header">
+        <a href="#" class="close">&times;</a>
+
+        <h3>Modal Heading</h3>
+    </div>
+    <div class="modal-body">
+        <p>One fine body…</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn primary">Primary</a>
+        <a href="#" class="btn secondary">Secondary</a>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="@{'/public/javascripts/after/bootstrap-modal-1.4.js'}"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+
+        $('#sendMessage').submit(function (event) {
+            /*
+             * We remove the default event
+             */
+            event.preventDefault();
+
+            UBE_AJAX.postForm('#sendMessage', function () {
+                $('#modal-from-dom').modal({'backdrop':true, 'keyboard':true});
+            });
+
+
+        });
+
+
+    });
+
+</script>
