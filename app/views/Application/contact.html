@@ -198,18 +198,6 @@
     $(document).ready(function () {
 
 
-        $('#sendMessage').submit(function (event) {
-            /*
-             * We remove the default event
-             */
-            event.preventDefault();
-
-            UBE_AJAX.postForm('#sendMessage', function () {
-                $('#modal-from-dom').modal({'backdrop':true, 'keyboard':true});
-            });
-
-
-        });
 
 
     });

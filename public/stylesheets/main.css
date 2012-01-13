@@ -2522,6 +2522,9 @@ header {
   height: 74px;
   position: relative;
 }
+header div.container {
+  margin-top: 0;
+}
 header #logo-header {
   margin-left: 0px;
   position: relative;
@@ -2546,15 +2549,24 @@ header ul a {
   color: #f58220;
   font-size: 18px;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fifty {
+  max-width: 50%;
+}
 #main-content {
   background-color: #f5f5f5;
   min-height: 200px;
 }
-#main-content p {
+#main-content p, #main-content li {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
-  line-height: 36px;
+  line-height: 23px;
 }
 #main-content #index {
   min-height: 800px;
@@ -2562,6 +2574,8 @@ header ul a {
 #main-content #index #presentation {
   zoom: 1;
   margin-top: 2%;
+  position: relative;
+  left: 10px;
 }
 #main-content #index #presentation:before, #main-content #index #presentation:after {
   display: table;
@@ -2591,6 +2605,7 @@ header ul a {
   height: 500px;
   background-repeat: no-repeat;
   position: relative;
+  left: -30px;
 }
 #main-content #index #slider p, #main-content #index #slider a {
   text-shadow: #233133 -1px -1px 1px;
@@ -2634,7 +2649,20 @@ header ul a {
   color: #bfbfbf;
   text-shadow: #233133 -1px -1px 1px;
 }
+#main-content #index .coda-nav h3.app-ocalypse {
+  color: #f55907;
+}
+#main-content #index .coda-nav h3.app-ocalypse:hover {
+  color: #f79d51;
+}
 #main-content #index .coda-nav h3:hover {
+  color: #d9d9d9;
+  text-shadow: 0 0 10px #ffffff;
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
+#main-content #index .coda-nav a.current h3 {
   color: #d9d9d9;
   text-shadow: 0 0 10px #ffffff;
   position: relative;
@@ -2648,18 +2676,165 @@ header ul a {
 }
 #main-content #index .coda-nav ul li a {
   color: #bfbfbf;
+  width: 174px;
+  height: 40px;
   text-shadow: #233133 -1px -1px 1px;
   display: block;
   float: left;
   margin-right: 1px;
   padding: 3px 6px;
   text-decoration: none;
-  width: 174px;
   text-align: center;
 }
 #main-content #index .coda-nav ul li a:hover {
   color: #d9d9d9;
   text-shadow: 0 0 10px #ffffff;
+}
+#main-content #mobile .block h1 {
+  text-align: center;
+}
+#main-content #mobile .block #mobileTopPage {
+  zoom: 1;
+  margin-top: 40px;
+}
+#main-content #mobile .block #mobileTopPage:before, #main-content #mobile .block #mobileTopPage:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+#main-content #mobile .block #mobileTopPage:after {
+  clear: both;
+}
+#main-content #mobile .block #leftMobile {
+  float: left;
+  width: 50%;
+}
+#main-content #mobile .block #kiosque {
+  float: right;
+}
+#main-content #mobile .block p + p {
+  margin-top: 50px;
+}
+#main-content #mobile .block #mobileBottomPage {
+  margin-top: 50px;
+}
+#main-content #mobile .block #mobileBottomPage img {
+  float: left;
+}
+#main-content #mobile .block #mobileBottomPage #slideshowHolder {
+  float: right;
+  margin-right: 42px;
+}
+#main-content #digitalFactory p + p {
+  margin-top: 50px;
+}
+#main-content #digitalFactory .block a {
+  position: absolute;
+  bottom: 20px;
+  left: 345px;
+}
+#main-content #company #qualityIllustration {
+  margin-right: 82px;
+}
+#main-content #company #ecouteIllustration {
+  margin-right: 160px;
+}
+#main-content #company #agileIllustration {
+  margin-right: 64px;
+}
+#main-content #company .companyRow + .companyRow {
+  margin-top: 50px;
+}
+#main-content #company .companyRow {
+  zoom: 1;
+}
+#main-content #company .companyRow:before, #main-content #company .companyRow:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+#main-content #company .companyRow:after {
+  clear: both;
+}
+#main-content #company .companyRow p {
+  float: left;
+  max-width: 50%;
+}
+#main-content #company .companyRow img {
+  float: right;
+  margin-right: 96px;
+}
+#main-content #contact #contactInfo h1 {
+  margin-bottom: 20px;
+}
+#main-content #contact #contactInfo img {
+  float: right;
+}
+#main-content #contact #contactInfo .left {
+  width: 400px;
+}
+#main-content #contact #contactInfo img {
+  margin-left: 10px;
+}
+#main-content #contact input[type="text"], #main-content #contact textarea {
+  background-color: #f5f5f5;
+}
+#main-content #contact fieldset + fieldset {
+  padding-top: 35px;
+}
+#main-content #contact #contactTextArea {
+  width: 890px;
+  height: 100px;
+}
+#main-content #ref img {
+  float: left;
+  margin-right: 14px;
+}
+#main-content #ref .block {
+  cursor: pointer;
+}
+#main-content #ref .block:hover {
+  cursor: pointer;
+  position: relative;
+  left: 8px;
+  top: 4px;
+  background-color: #656567;
+}
+#main-content #appOcalypse img {
+  display: block;
+  margin: auto;
+  position: relative;
+  left: 22px;
+}
+#main-content #appOcalypse .block {
+  display: table;
+}
+#main-content #appOcalypse .block > h1 {
+  display: table-row;
+  text-align: center;
+}
+#main-content #appOcalypse .block > img {
+  display: table-row;
+}
+#main-content #appOcalypse .row {
+  display: table-row;
+}
+#main-content #appOcalypse .cell {
+  display: table-cell;
+  padding: 14px;
+}
+#main-content #appOcalypse #rowPres > .cell {
+  width: 50%;
+}
+#main-content #appOcalypse p {
+  text-align: justify;
+}
+#main-content #appOcalypse .center {
+  display: block;
+  margin: auto;
+  width: 130px;
+  position: relative;
+  left: 22px;
 }
 /*Footer*/
 footer {
@@ -2687,6 +2862,8 @@ footer a:hover, footer h4:hover {
 }
 footer #footer_link {
   padding: 10px 0 40px 0;
+  position: relative;
+  left: 8px;
 }
 footer #footer_link li, footer #footer_link ol, footer #footer_link ul {
   list-style: none;
@@ -2695,9 +2872,16 @@ footer #footer_link li, footer #footer_link ol, footer #footer_link ul {
 footer #footer_link ol > li + li {
   margin-left: 20px;
 }
+footer div.container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 footer #copyright {
   font-size: 18px;
   text-align: center;
+}
+#modal-from-dom h1, #modal-from-dom h2, #modal-from-dom h3 {
+  text-shadow: none;
 }
 /*
 	jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider
@@ -2765,10 +2949,10 @@ noscript div {
 .coda-slider-wrapper {
   clear: both;
   overflow: hidden;
-  padding: 18px 20px 20px 20px;
+  padding: 18px 20px 20px 18px;
   width: 900px;
   height: 380px;
-  margin-left: 18px;
+  margin-left: 20px;
 }
 .coda-slider {
   float: left;
@@ -2879,4 +3063,75 @@ a.web-page {
   top: 490px;
   left: 250px;
   width: 130px;
+}
+#main-content .block {
+  position: relative;
+  left: 8px;
+  zoom: 1;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #4c4c4d;
+  padding: 30px;
+  -webkit-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.65);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.65);
+}
+#main-content .block:before, #main-content .block:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+#main-content .block:after {
+  clear: both;
+}
+#main-content .block p, #main-content .block li {
+  text-shadow: #233133 -1px -1px 1px;
+  color: #bfbfbf;
+  text-align: justify;
+  list-style: inside;
+}
+#main-content .block + .block {
+  margin-top: 50px;
+}
+#main-content .block-light {
+  zoom: 1;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+#main-content .block-light:before, #main-content .block-light:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+#main-content .block-light:after {
+  clear: both;
+}
+#main-content .block-light p {
+  color: #404040;
+  text-shadow: none;
+}
+#main-content .block-light a {
+  color: #049cdb;
+}
+#main-content .block-light a:hover {
+  text-shadow: 0 0 10px white;
+  color: #17b8fb;
+}
+#main-content .block-light.info_address {
+  position: absolute;
+  right: 30px;
+}
+.polaroid {
+  /* By default, we tilt all our images -2 degrees */
+
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+.polaroid a:after {
+  content: attr(title);
 }
