@@ -29,8 +29,15 @@ public class Contact extends Controller {
 
 
         Logger.info("[SendMessage]" + UbeHtml.decode(name + " : " +  email + ":" + message) );
+        
+        try 
+        {
         UbeMail.createNewEmail(UbeHtml.decode(name),UbeHtml.decode(message), UbeHtml.decode(email),"contact@webube.com").send();
-       
+        }
+        catch (Exception e)
+        {
+            Logger.error(e.toString());
+        }
 
 
         if (request.isAjax())
