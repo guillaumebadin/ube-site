@@ -17,5 +17,8 @@ ${yuicompressor} ${cssOption}  ../public/stylesheets/main.css > ../public/styles
 # JS Optimisations
 
 ${compressor} ${jsOption} ../public/javascripts/after/webube.util.js \
-    ../public/javascripts/after/bootstrap-modal-1.4.js > ../public/javascripts/after.${version}.js
+    ../public/javascripts/after/bootstrap-modal-1.4.js \
+     ../public/javascripts/after/jqFancyTransitions.1.8.min.js \
+     ../public/javascripts/after/jquery.easing.1.3.js \
+     ../public/javascripts/after/jquery.coda-slider-2.1.js > ../public/javascripts/after.${version}.js
 
