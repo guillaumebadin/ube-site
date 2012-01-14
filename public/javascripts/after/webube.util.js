@@ -50,7 +50,6 @@ var UbeMenu = function(){
 
 
 
-
     return {
         /**
          * You must use this method with data-link attribute
@@ -58,6 +57,7 @@ var UbeMenu = function(){
          */
         updateMenu:updateMenu,
         applyDataUbeLink:applyDataUbeLink
+
     }
 }();
 
@@ -70,7 +70,7 @@ var UBE_AJAX = (function() {
      * @param idToAttach
      * @param successCallback
      */
-    function postForm(idToAttach, successCallback) {
+    var postForm = function(idToAttach, successCallback) {
 
 
         var urlToPost = $(idToAttach).attr('action');
@@ -89,7 +89,7 @@ var UBE_AJAX = (function() {
     }
 
 
-    function formToJson(idFrom) {
+    var formToJson = function (idFrom) {
 
         var form = $(idFrom);
 
@@ -107,6 +107,19 @@ var UBE_AJAX = (function() {
     }
 
 
+
+    var loadImg = function(urlImg) {
+        $('body').append('<img src="'+ urlImg + '" style="display:none;" /> ');
+    }
+
+    var loadImgOfUrl = function(urlToLoad) {
+        $('<div>').load(urlToLoad + ' img',
+            function(){
+                $('#loadToHide').append($(this).html());
+            });
+    }
+
+
     return {
         /**
          * This method post a form via ajax.
@@ -114,7 +127,9 @@ var UBE_AJAX = (function() {
          * @param successCallback
          */
         postForm:postForm,
-        formToJson:formToJson
+        formToJson:formToJson,
+        loadImg:loadImg,
+        loadImgOfUrl:loadImgOfUrl
     }
 
 })();

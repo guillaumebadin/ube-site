@@ -67,12 +67,12 @@
             <div style="position:relative;">
 
                 <ul>
-                    <li><a  href="@{Application.mobile()}" data-link>Mobile</a></li>
-                    <li><a  href="@{Application.digitalFactory()}" data-link>Atelier digital</a></li>
-                    <li><a  href="@{Application.company()}" data-link>Société</a></li>
-                    <li><a  href="@{Application.ref()}" data-link=>Références</a></li>
-                    <li><a  href="@{Application.contact()}" data-link>Contacts</a></li>
-                    <li><a  href="@{Application.appOcalypse()}" data-link>App-Ocalypse</a></li>
+                    <li><a href="@{Application.mobile()}" data-link>Mobile</a></li>
+                    <li><a href="@{Application.digitalFactory()}" data-link>Atelier digital</a></li>
+                    <li><a href="@{Application.company()}" data-link>Société</a></li>
+                    <li><a href="@{Application.ref()}" data-link=>Références</a></li>
+                    <li><a href="@{Application.contact()}" data-link>Contacts</a></li>
+                    <li><a href="@{Application.appOcalypse()}" data-link>App-Ocalypse</a></li>
                 </ul>
 
             </div>
@@ -86,6 +86,7 @@
 
 
 #{doLayout /}
+
 
 </div>
 <!-- /container -->
@@ -163,10 +164,6 @@
 #{/else}
 
 
-<script>
-
-</script>
-
 
 
 <script style="text/javascript">
@@ -177,16 +174,7 @@
         UbeMenu.updateMenu('selected');
         UbeMenu.applyDataUbeLink('selected');
 
-        $('#coda-slider').codaSlider({
-            carousel:true,
-            autoSlide:true,
-            autoSlideInterval:6000,
-            slideEaseDuration:2000,
-            autoSlideStopWhenClicked:true,
-            autoHeight:false,
-            dynamicArrows:false,
-            panelTitleSelector:".ube-slider-tab"
-        });
+
 
         $('#slideshowHolder').jqFancyTransitions({
             width:325,
@@ -195,8 +183,8 @@
 
         $('#sendMessage').submit(function (event) {
             /*
-             * We remove the default event
-             */
+            * We remove the default event
+            */
             event.preventDefault();
 
             UBE_AJAX.postForm('#sendMessage', function () {
@@ -205,6 +193,48 @@
 
 
         });
+    });
+    /**
+     * After loading
+     **/
+    $(window).load(function () {
+
+
+        /**
+         * The loader is only in the main page
+         */
+        $("#load").fadeOut(function () {
+            $("#to-hide").fadeIn();
+
+
+            $('#coda-slider').codaSlider({
+                carousel:true,
+                autoSlide:true,
+                autoSlideInterval:6000,
+                slideEaseDuration:2000,
+                autoSlideStopWhenClicked:true,
+                autoHeight:false,
+                dynamicArrows:false,
+                panelTitleSelector:".ube-slider-tab"
+            });
+
+
+
+           var divLoading = $('<div id="loadToHide" style="display: none;"> </div>');
+           $('body').append(divLoading);
+
+           UBE_AJAX.loadImgOfUrl('@{Application.mobile()}');
+           UBE_AJAX.loadImgOfUrl('@{Application.digitalFactory()}');
+           UBE_AJAX.loadImgOfUrl('@{Application.company()}');
+           UBE_AJAX.loadImgOfUrl('@{Application.ref()}');
+           UBE_AJAX.loadImgOfUrl('@{Application.contact()}');
+           UBE_AJAX.loadImgOfUrl('@{Application.appOcalypse()}');
+
+        });
+
+
+
+
 
 
     });
@@ -212,5 +242,6 @@
 
 </script>
 
+</div>
 </body>
 </html>
