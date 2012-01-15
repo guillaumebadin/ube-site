@@ -32,7 +32,7 @@ public class Contact extends Controller {
         
         try 
         {
-        UbeMail.createNewEmail(UbeHtml.decode(name),UbeHtml.decode(message), UbeHtml.decode(email),"contact@webube.com").send();
+        UbeMail.createNewEmail(UbeHtml.decode(name),UbeHtml.decode(message) + " Email is : " + UbeHtml.decode(email),"mail.webube@gmail.com" ,"contact@webube.com").send();
         }
         catch (Exception e)
         {
