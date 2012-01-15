@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-version="v2";
+version="v3";
 lessc='/Users/guillaumebadin/Documents/pro/sdk/less.js/bin/lessc';
 compressor="/usr/bin/java -jar bin/compiler.jar";
 yuicompressor="/usr/bin/java -jar bin/yuicompressor-2.4.7.jar"
@@ -17,7 +17,6 @@ ${yuicompressor} ${cssOption}  ../public/stylesheets/main.css > ../public/styles
 # JS Optimisations
 
 ${compressor} ${jsOption} ../public/javascripts/after/webube.util.js \
-    ../public/javascripts/after/bootstrap-modal-1.4.js \
      ../public/javascripts/after/jqFancyTransitions.1.8.min.js \
      ../public/javascripts/after/jquery.easing.1.3.js \
      ../public/javascripts/after/jquery.coda-slider-2.1.js > ../public/javascripts/after.${version}.js
