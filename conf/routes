@@ -8,6 +8,11 @@ GET     /                                       Application.index
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
+*       /robots.txt                             staticFile:/public/robots.txt
+*       /sitemap.xml                            staticFile:/public/sitemap.xml
+
+
+
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
