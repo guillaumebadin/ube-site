@@ -41,7 +41,7 @@ public class Contact extends Controller {
 
 
         if (request.isAjax())
-            renderText("Mail Sent");
+            renderJSON("{status:'ok'}");
         else
             Application.contact();
     }

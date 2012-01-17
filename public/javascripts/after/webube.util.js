@@ -5,7 +5,7 @@
  * Time: 23:25
  * To change this template use File | Settings | File Templates.
  */
-var UbeMenu = function(){
+var UbeMenu = function () {
 
     /**
      * You must use strict option for javascript
@@ -18,29 +18,65 @@ var UbeMenu = function(){
      * You must use this method with data-link attribute
      * @param classToAdd
      */
-    var updateMenu = function(classToAdd)
-    {
+    var updateMenu = function (classToAdd) {
 
         var pathName = document.location.pathname.toLowerCase();
 
-        $('[data-link]').each(function(index,item){
+        $('[data-link]').each(function (index, item) {
 
             var dataLink = $(item).attr('href').toLowerCase();
 
-            if (pathName == dataLink)
+            if (pathName == dataLink) {
                 $(item).addClass(classToAdd);
-
+            }
         });
 
         return this;
     }
 
-    var applyDataUbeLink = function()  {
-        $('[data-ube-link]').each(function(index,item){
+    var updateMenuViaAjax = function (classToAdd) {
+        $('[data-link]').each(function (index, item) {
+
+            $(this).unbind();
+
+            $(item).removeClass(classToAdd);
+
+
+            var dataLink = $(item).attr('href').toLowerCase();
+
+
+            $(this).click(function (event) {
+
+                $('[data-link]').each(function (index, item) {
+                    $(item).removeClass(classToAdd);
+                });
+
+                event.preventDefault();
+
+                $(this).addClass(classToAdd);
+
+                var idToShow = '#' + $(this).attr('data-link');
+
+                history.pushState('', '', dataLink);
+
+                var idToRemove = '#' +  $('.active').attr('id');
+
+                $(idToRemove).removeClass('active');
+
+                _UbeUi.ubeSlide(idToRemove,idToShow);
+
+                $(idToShow).addClass('active');
+
+            });
+        });
+    }
+
+    var applyDataUbeLink = function () {
+        $('[data-ube-link]').each(function (index, item) {
 
             var url = $(item).attr('data-ube-link');
 
-            $(item).click(function(){
+            $(item).click(function () {
 
 
             });
@@ -49,19 +85,20 @@ var UbeMenu = function(){
     }
 
 
-
     return {
         /**
          * You must use this method with data-link attribute
          * @param classToAdd
          */
         updateMenu:updateMenu,
-        applyDataUbeLink:applyDataUbeLink
+        applyDataUbeLink:applyDataUbeLink,
+        updateMenuViaAjax:updateMenuViaAjax
 
     }
 }();
 
-var UBE_AJAX = (function() {
+
+var UBE_AJAX = (function () {
 
     'use strict';
 
@@ -70,21 +107,21 @@ var UBE_AJAX = (function() {
      * @param idToAttach
      * @param successCallback
      */
-    var postForm = function(idToAttach, successCallback) {
+    var postForm = function (idToAttach, successCallback) {
 
 
         var urlToPost = $(idToAttach).attr('action');
 
         var sendButton = $(idToAttach).find("[type='submit']").get(0);
 
-        sendButton.click(function(event){
+        sendButton.click(function (event) {
 
             event.preventDefault();
 
         });
 
         /* Send the data using post and call successCallback */
-        $.post(urlToPost, UBE_AJAX.formToJson(idToAttach), successCallback);
+        $.post(urlToPost, UBE_AJAX.formToJson(idToAttach));
 
     }
 
@@ -98,7 +135,7 @@ var UBE_AJAX = (function() {
 
         var tab = a.split('&');
 
-        $.each(tab, function(index, elem) {
+        $.each(tab, function (index, elem) {
             var ele = elem.split('=');
 
             o[ele[0]] = ele[1];
@@ -107,15 +144,28 @@ var UBE_AJAX = (function() {
     }
 
 
-
-    var loadImg = function(urlImg) {
-        $('body').append('<img src="'+ urlImg + '" style="display:none;" /> ');
+    var loadImg = function (urlImg) {
+        $('body').append('<img src="' + urlImg + '" style="display:none;" /> ');
     }
 
-    var loadImgOfUrl = function(urlToLoad) {
+    /*
+     Load all images of url
+     */
+    var loadImgOfUrl = function (urlToLoad) {
         $('<div>').load(urlToLoad + ' img',
-            function(){
+            function () {
                 $('#loadToHide').append($(this).html());
+            });
+    }
+
+    var loadPageOfUrl = function (urlToLoad, id, callBack) {
+        $('<div>').load(urlToLoad + ' ' + id,
+            function () {
+
+                $(this).children(id).css('display', 'none');
+                $('#main-content').append($(this).html());
+                if (callBack)
+                    callBack();
             });
     }
 
@@ -129,10 +179,164 @@ var UBE_AJAX = (function() {
         postForm:postForm,
         formToJson:formToJson,
         loadImg:loadImg,
-        loadImgOfUrl:loadImgOfUrl
+        loadImgOfUrl:loadImgOfUrl,
+        loadPageOfUrl:loadPageOfUrl
+
     }
 
 })();
+
+var _UbeUi = (function () {
+    'use strict';
+
+
+    var ubeSlide = function (idToRemove, idToShow) {
+
+        $(idToRemove).transition({ scale:0.8 }, 2000, 'ease').
+            transition({ x:'-4000px'}, 500, 'ease', function () {
+                $(this).css('display', 'none');
+
+                $(idToShow).css({x:'4000px'}).show().
+                    transition({ scale:0.8 }).
+                    transition({x:'0'}, 500, 'ease').
+                    transition({ scale:1 }, 2000, 'ease');
+            });
+
+
+    };
+
+
+    return {
+        ubeSlide:ubeSlide
+    }
+
+})();
+
+var _UbeUtil = (function () {
+
+    'use strict';
+
+    var userAgent = navigator.userAgent.toLowerCase();
+    jQuery.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+
+    /**
+     *  Check the email validation
+     * @param email
+     * @return true | false
+     */
+    function checkEmailValidation(email) {
+        if (null == email || "" == email)
+            return true;
+
+
+        var checkEmail = /.com$|.fr$|.eu$|.uk$/;
+
+        return checkEmail.test(email);
+    }
+
+    /**
+     * Check if the current browser is IE7
+     */
+    function isBrowserIE7() {
+        if (jQuery.browser.msie && jQuery.browser.version.substr(0, 1) == 7) {
+            return true;
+        }
+        else
+            return false;
+    }
+
+
+    /**
+     * Check if the current browser is IE8
+     */
+    function isBrowserIE8() {
+        if (jQuery.browser.msie && jQuery.browser.version.substr(0, 1) == 8) {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    /**
+     * Check if the current browser is IE9
+     */
+    function isBrowserIE9() {
+        if (jQuery.browser.msie && jQuery.browser.version.substr(0, 1) == 9) {
+            return true;
+        }
+        else
+            return false;
+    }
+
+
+    /**
+     * Check if the current browser is IE
+     */
+    function isBrowserIE() {
+        if (jQuery.browser.msie) {
+            return true;
+        }
+        else
+            return false;
+    }
+
+
+    /**
+     * Check if the current browser is Chrome
+     */
+    function isBrowserChrome() {
+        return jQuery.browser.chrome;
+    }
+
+
+    /**
+     * Webube function with replace de $ of jquery
+     */
+    function $(el) {
+        if (isBrowserIE7()) {
+            return jQuery('[treatment-name-id=' + el + ']');
+        }
+        else {
+            return jQuery(el);
+        }
+    }
+
+
+    var alertCpt = 0;
+
+    /**
+     * This method show just 1 alert (Useful for IE debuging)
+     * @param str to put in the alert
+     */
+    function debugAlert(str) {
+
+        if (alertCpt < 1) {
+            window.alert(str);
+        }
+
+        alertCpt = alertCpt + 1;
+
+    }
+
+    function showCptAlert() {
+        window.alert(alertCpt);
+    }
+
+
+    return {
+        checkEmailValidation:checkEmailValidation,
+        isBrowserIE7:isBrowserIE7,
+        isBrowserIE8:isBrowserIE8,
+        isBrowserIE9:isBrowserIE9,
+        isBrowserIE:isBrowserIE,
+        isBrowserChrome:isBrowserChrome,
+        $:$,
+        debugAlert:debugAlert,
+        showCptAlert:showCptAlert
+    }
+
+})();
+
 
 
 
