@@ -41,10 +41,50 @@
 
     }
 
+    .offre-block {
+        width: 250px;
+        height: 350px;
+
+                 position: relative;
+                 float : left;
+
+                  .border-radius(@radius);
+                  background-color:@ubeGray;
+                padding: @radius;
+          .box-shadow(@shadow);
+
+                ul, p {
+                    /*list-style-type: none;*/
+                    margin-top: 10px;
+                }
+
+                p,li {
+                    .NormalTextShadow();
+                    color: @textColor;
+                    text-align: justify;
+                    /*text-align: left;*/
+                    list-style: inside;
+
+                }
+    }
 
     .block + .block {
         margin-top:50px;
     }
+
+    #logo-fb-webube {
+        background-image: url('../images/icontexto-inside-facebook.png');
+        width: 128px;
+        height: 128px;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+        .small-block-clearfix {
+           .clearfix;
+        }
+
+
 
     .block-light {
         .clearfix;
