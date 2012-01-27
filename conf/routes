@@ -10,6 +10,7 @@ GET     /favicon.ico                            404
 
 *       /robots.txt                             staticFile:/public/robots.txt
 *       /sitemap.xml                            staticFile:/public/sitemap.xml
+*       /appocalypse-demo                       staticFile:/public/appocalypse-demo.html
 
 
 

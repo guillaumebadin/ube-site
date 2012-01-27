@@ -1,0 +1,50 @@
+{
+    "children":[
+        {
+            "title":"Société",
+            "desc":"<div class=\"contentContainer\"><img src=\"http://src.sencha.io/320/http://c1663920.r20.cf2.rackcdn.com/illu_ecoute.png\" /><h1>Écoute</h1><p>WebUbe a positionné la relation client au centre de sa stratégie. En effet, nous sommes intimement convaincus qu’une relation de confiance doit s’instaurer immédiatement de manière à travailler ensemble dans les meilleures conditions possibles.</p><img  src=\"http://src.sencha.io/320/http://c1663920.r20.cf2.rackcdn.com/illu_excellence-technique.png\" /><h1>Excellence technique</h1><p>Les ingénieurs WebUbe sont tous des passionnés de haute technologie. Notre expertise technique et notre sens de l’innovation nous poussant à aller toujours plus loin, nous n’hésitons pas à être précurseurs en développant une nouvelle technologie mobile hybride nommée App-Ocalypse.</p><img  src=\"http://src.sencha.io/320/http://c1663920.r20.cf2.rackcdn.com/illu_quality.png\" /><h1>La Qualité</h1><p>WebUbe s’engage à fournir un rendu de qualité, sans faille et fonctionnel. L’excellence est une valeur profondément ancrée dans le patrimoine génétique de WebUbe.</p><img  src=\"http://src.sencha.io/320/http://c1663920.r20.cf2.rackcdn.com/illu_methode.png\" /><h1>Méthode de travail</h1><p>Toujours à votre écoute, les ingénieurs WebUbe vous aident à définir vos besoins et à formaliser vos attentes. Qualité, productivité et rigueur sont les bases de notre savoir-faire.</p><img  src=\"http://src.sencha.io/320/http://c1663920.r20.cf2.rackcdn.com/illu_agile.png\" /><h1>Scrum, Lean management</h1><p>WebUbe croit beaucoup aux méthodes agiles. Nos équipes définissent avec vous les priorités. Le cycle d\'itération étant court vous pouvez à tout moment réorienter vos besoins ou faire évoluer différemment votre projet.</p></div>'",
+            "leaf":true
+        },
+        {
+            "title":"Références",
+            "children":[
+                {
+                    "title":"Yakadeal",
+                    "desc":"<div>Yakadeal a été développé afin de faciliter la vie des acheteurs de bons plans. En effet, les sites proposant des achats groupés sur internet sont nombreux, et leur nombre ne cesse d’augmenter. Yakadeal regroupe tous ces sites afin que vous puissiez retrouver tous les meilleurs bons plans de votre région et du net sur un seul et même site !</div>",
+                    "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/yakadeal.png",
+                    "leaf":true
+                },
+                {
+                    "title":"Wakizz",
+                    "desc":"<div>Application Facebook viral permettant une interaction forte avec ses amis. Wakizz permet l’envoi d’un message accompagné d’un carton rouge, jaune ou vert en fonction de la teneur de celui-ci ! : Un remerciement ou des félicitations : carton vert ! Un retard, un oubli ou une faute et c’est le carton rouge !</div>",
+                    "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/wakizz.png",
+                    "leaf":true
+                },
+                {
+                    "title":"Cricel",
+                    "desc": "<div>WebUbe a participé au développement de la société Cricel :</div><div><ul><li>Conseil en stratégie marketing et développement d'une partie du site e-commerce</li><li>Développement des outils de vente en ligne.</li><li>Management de l’innovation, nouvelles gammes de produits.</li><li>Sourcing marchés complémentaires.</li></ul></div>",
+                    "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/cricel.png",
+                    "leaf":true
+                },
+                {
+                    "title":"Drive South Africa",
+                    "desc":"<div>SEO, référencement naturel et netlinking de qualité pour le leader du tourisme on-line Sud africain!</div><div>Drive South Africa est un site sud-africain (Le Cap) spécialisé dans le tourisme et la location de voiture. WebUbe s’est chargé du référencement Internet (SEO) permettant à DSA d’assoir sa position de leader national!</div>",
+                    "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/drivesouthafrica.png",
+                    "leaf":true
+                },
+                {
+                    "title":"Girard",
+                    "desc":"<div>Création d'un site vitrine et gestion du SEO</div>",
+                    "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/girard.png",
+                    "leaf":true
+                }
+            ]
+        },
+        {
+            "title":"Contact",
+            "desc":"<div class=\"contentContainer\"><img src=\"http://c1663920.r20.cf2.rackcdn.com/logo_contact.png\" /><h1>Venez trouver un partenaire de confiance</h1><p>Si vous avez un projet en tête et que vous cherchez un partenaire de confiance pour le mener à bien, vous êtes au bon endroit !</p><p>Un site Internet, un réseau social, une application mobile, une application Facebook à développer ? WebUbe vous apportera toute son expertise et son savoir-faire.</p><p><strong>N’hésitez pas à nous contacter !</strong></p><h1>Contact</h1><p><strong>Adresse :</strong> <address>27-28 rue du Chemin-Vert,75011 Paris</address></p><p><strong>Téléphone :</strong> <a rel=\"external\" href=\"tel:+0171501102\"> 01 71 50 11 02</a></p><p><strong>e-mail :</strong> <a rel=\"external\" href=\"mailto:contact@webube.com\">contact@webube.com</a></p><img src=\"http://c1663920.r20.cf2.rackcdn.com/loupe_img.png\" /><h1>Nous rejoindre</h1><p>Bonne ambiance, dynamisme et travail de qualité sont les caractéristiques principales de la culture d’entreprise de WebUbe. Pour soutenir sa croissance, WebUbe recrute les talents d’aujourd’hui.</p><p>Les profils que nous recherchons :</p><ul><li>R&D,</li><li>Développement et gestion de proje,t</li><li>Graphiste et intégrateur HTML.</li></ul><p>N’hésitez pas à nous communiquer votre candidature (emplois ou stage), nous l’étudierons avec la plus grande attention.</p><h1>Notre culture</h1><p>Vous intégrerez une équipe jeune, motivée et très motivée. Nous pensons qu’une personne exprime le maximum de son potentiel en exploitant ses passions et en créant des produits dont elle peut être fière. Chez WebUbe, vous travaillerez dans un environnement fun où passion, innovation et création sont en synergie.</p><h1>Responsabilité</h1><p>Si vous avez un projet en tête et que vous cherchez un partenaire de confiance pour le mener à bien, vous êtes au bon endroit !</p><p>Un site Internet, un réseau social, une application mobile, une application Facebook à développer ? WebUbe vous apportera toute son expertise et son savoir-faire.</p><p><strong>N’hésitez pas à nous contacter !</strong></p><h1>Venez trouver un partenaire de confiance</h1><p>Vous travaillerez sur notre technologie phare \"App-Ocalypse\" et notre infrastructure SAS dédiées aux professionnels \"WebUbe Cloud Services\". Vous développerez les nouvelles fonctionnalités de la gamme WebUbe. Outre notre technologie cross plateformes, vous aurez aussi à imaginer les futurs produits.</p><h1>Technologies</h1><p>Nous utilisons une multitude de technologies et d\'outils, incluant <strong>Git</strong>, <strong>Play Framework</strong>, <strong>JQuery</strong>, MongoDb, <strong>Java</strong>, <strong>Scala</strong> et <strong>Dart</strong>. Nous créons des plug-ins pour toutes les plateformes que nous supportons, <strong>Android</strong>, <strong>IOS</strong>, <strong>BlackBerry</strong>, etc..</p><p>Nous sommes ouverts et nous sommes intimement persuadées qu’il ne faut jamais s’enfermer dans une seule technologie.</p><p>Intéressé ? Postulez ! Envoyez-nous un email à <a href=\"mailto:contact@webube.com\">contact@webube.com</a></p></div>",
+            "leaf":true
+        }
+    ],
+    "text":"."
+}
