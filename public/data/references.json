@@ -1,0 +1,35 @@
+{
+    "children":[
+        {
+            "title":"Yakadeal",
+            "desc":"<div>Yakadeal a été développé afin de faciliter la vie des acheteurs de bons plans. En effet, les sites proposant des achats groupés sur internet sont nombreux, et leur nombre ne cesse d’augmenter. Yakadeal regroupe tous ces sites afin que vous puissiez retrouver tous les meilleurs bons plans de votre région et du net sur un seul et même site !</div>",
+            "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/yakadeal.png",
+            "leaf":true
+        },
+        {
+            "title":"Wakizz",
+            "desc":"<div>Application Facebook viral permettant une interaction forte avec ses amis. Wakizz permet l’envoi d’un message accompagné d’un carton rouge, jaune ou vert en fonction de la teneur de celui-ci ! : Un remerciement ou des félicitations : carton vert ! Un retard, un oubli ou une faute et c’est le carton rouge !</div>",
+            "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/wakizz.png",
+            "leaf":true
+        },
+        {
+            "title":"Cricel",
+            "desc": "<div>WebUbe a participé au développement de la société Cricel :</div><div><ul><li>Conseil en stratégie marketing et développement d'une partie du site e-commerce</li><li>Développement des outils de vente en ligne.</li><li>Management de l’innovation, nouvelles gammes de produits.</li><li>Sourcing marchés complémentaires.</li></ul></div>",
+            "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/cricel.png",
+            "leaf":true
+        },
+        {
+            "title":"Drive South Africa",
+            "desc":"<div>SEO, référencement naturel et netlinking de qualité pour le leader du tourisme on-line Sud africain!</div><div>Drive South Africa est un site sud-africain (Le Cap) spécialisé dans le tourisme et la location de voiture. WebUbe s’est chargé du référencement Internet (SEO) permettant à DSA d’assoir sa position de leader national!</div>",
+            "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/drivesouthafrica.png",
+            "leaf":true
+        },
+        {
+            "title":"Girard",
+            "desc":"<div>Création d'un site vitrine et gestion du SEO</div>",
+            "imagePath":"http://src.sencha.io/160/http://c1663920.r20.cf2.rackcdn.com/girard.png",
+            "leaf":true
+        }
+    ],
+    "text":"."
+}
