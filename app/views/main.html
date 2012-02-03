@@ -50,11 +50,11 @@
         :focus {
             -moz-outline-style: none;
         }
+
         :-moz-any-link:focus {
             outline: none;
         }
     </style>
-
 
 
     <script type="text/javascript">
@@ -63,10 +63,13 @@
         _gaq.push(['_setAccount', 'UA-21588364-1']);
         _gaq.push(['_trackPageview']);
 
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
         })();
 
     </script>
@@ -219,9 +222,9 @@
 #{/if}
 #{else}
 
-    <script type="text/javascript" src="http://c1663920.r20.cf2.rackcdn.com/after.v5.js"></script>
-    *{We remove bootstrap-modal because there is a bug with google javascript compressor}*
-    <script type="text/javascript" src="@{'/public/javascripts/after/bootstrap-modal-1.4.js'}"></script>
+<script type="text/javascript" src="http://c1663920.r20.cf2.rackcdn.com/after.v5.js"></script>
+*{We remove bootstrap-modal because there is a bug with google javascript compressor}*
+<script type="text/javascript" src="@{'/public/javascripts/after/bootstrap-modal-1.4.js'}"></script>
 
 #{/else}
 
@@ -231,7 +234,7 @@
 <script style="text/javascript">
 
 
-    var codaSlider = function(){
+    var codaSlider = function () {
         $('#coda-slider').codaSlider({
             carousel:true,
             autoSlide:true,
@@ -245,8 +248,7 @@
     };
 
 
-
-    var fancyTransition = function(){
+    var fancyTransition = function () {
         $('#slideshowHolder').jqFancyTransitions({
             width:325,
             height:425
@@ -254,7 +256,7 @@
     };
 
 
-    var sendMessage = function(){
+    var sendMessage = function () {
 
         $('#modal-from-dom').modal({'backdrop':true, 'keyboard':true});
 
@@ -295,8 +297,6 @@
             $("#to-hide").fadeIn();
 
 
-
-
             if (_UbeUtil.isBrowserIE()) {
 
                 var divLoading = $('<div id="loadToHide" style="display: none;"> </div>');
@@ -315,7 +315,7 @@
 
 
                 UBE_AJAX.loadPageOfUrl('@{Application.mobile()}',
-                        '#mobile',fancyTransition);
+                        '#mobile', fancyTransition);
 
                 UBE_AJAX.loadPageOfUrl('@{Application.digitalFactory()}',
                         '#digitalFactory');
@@ -336,7 +336,6 @@
                 UbeMenu.updateMenuViaAjax('selected');
 
 
-
             }
 
             codaSlider();
@@ -349,7 +348,5 @@
 
 </script>
 
-
-</div>
 </body>
 </html>
