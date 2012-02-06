@@ -23,19 +23,16 @@ import java.net.URL;
 public class Contact extends Controller {
 
 
-    public static void sendMessage( String name,
+    public static void sendMessage(String name,
                                    String email,
                                    String message) {
 
 
-        Logger.info("[SendMessage]" + UbeHtml.decode(name + " : " +  email + ":" + message) );
-        
-        try 
-        {
-        UbeMail.createNewEmail(UbeHtml.decode(name),UbeHtml.decode(message) + " Email is : " + UbeHtml.decode(email),"mail.webube@gmail.com" ,"contact@webube.com").send();
-        }
-        catch (Exception e)
-        {
+        Logger.info("[SendMessage]" + UbeHtml.decode(name + " : " + email + ":" + message));
+
+        try {
+            UbeMail.createNewEmail(UbeHtml.decode(name), UbeHtml.decode(message) + " Email is : " + UbeHtml.decode(email), "mail.webube@gmail.com", "contact@webube.com").send();
+        } catch (Exception e) {
             Logger.error(e.toString());
         }
 
