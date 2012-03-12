@@ -132,7 +132,7 @@
             <div style="position:relative;">
 
                 <ul>
-                    <li><a href="@{Application.mobile()}" data-link="mobile">WebApp</a></li>
+                    <li><a href="@{Application.webApp()}" data-link="webApp">WebApp</a></li>
                     <li><a href="@{Application.webSite()}" data-link="webSite">Site Internet</a></li>
                     <li><a href="@{Application.company()}" data-link="company">Société</a></li>
                     <li><a href="@{Application.ref()}" data-link="ref">Références</a></li>
@@ -174,7 +174,7 @@
                 <li class="span4">
                     <h2>Métiers</h2>
                     <ul>
-                        <li><a href="@{Application.mobile()}">Web App</a></li>
+                        <li><a href="@{Application.webApp()}">Web App</a></li>
                         <li><a href="@{Application.webSite()}">Site Web</a></li>
                         <li><a href="@{Application.phoenixProject()}">Projet Phoenix</a></li>
                     </ul>
@@ -299,8 +299,8 @@
             $("#to-hide").fadeIn();
 
 
-            UBE_AJAX.loadPageOfUrl('@{Application.mobile()}',
-                    '#mobile', fancyTransition);
+            UBE_AJAX.loadPageOfUrl('@{Application.webApp()}',
+                    '#webApp', fancyTransition);
 
             UBE_AJAX.loadPageOfUrl('@{Application.webSite()}',
                     '#webSite');

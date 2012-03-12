@@ -12,7 +12,7 @@ public class Application extends Controller {
         render();
     }
 
-    public static void mobile()
+    public static void webApp()
     {
         render();
     }
