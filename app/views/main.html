@@ -137,7 +137,8 @@
                     <li><a href="@{Application.company()}" data-link="company">Société</a></li>
                     <li><a href="@{Application.ref()}" data-link="ref">Références</a></li>
                     <li><a href="@{Application.contact()}" data-link="contact">Contacts</a></li>
-                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix ©</strong></a></li>
+                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix
+                        ©</strong></a></li>
                 </ul>
 
             </div>
@@ -202,7 +203,8 @@
         </div>
 
         <div class="row">
-            <h4 id="copyright">© 2011–2012 <strong>WebUbe</strong>, <strong>Projet Phoenix</strong>,<strong>Eagle</strong></h4>
+            <h4 id="copyright">© 2011–2012 <strong>WebUbe</strong>, <strong>Projet
+                Phoenix</strong>,<strong>Eagle</strong></h4>
         </div>
     </div>
 </footer>
@@ -297,46 +299,27 @@
             $("#to-hide").fadeIn();
 
 
-            if (_UbeUtil.isBrowserIE()) {
+            UBE_AJAX.loadPageOfUrl('@{Application.mobile()}',
+                    '#mobile', fancyTransition);
 
-                var divLoading = $('<div id="loadToHide" style="display: none;"> </div>');
-                $('body').append(divLoading);
+            UBE_AJAX.loadPageOfUrl('@{Application.webSite()}',
+                    '#webSite');
 
+            UBE_AJAX.loadPageOfUrl('@{Application.company()}',
+                    '#company');
 
-                UBE_AJAX.loadImgOfUrl('@{Application.mobile()}');
-                UBE_AJAX.loadImgOfUrl('@{Application.webSite()}');
-                UBE_AJAX.loadImgOfUrl('@{Application.company()}');
-                UBE_AJAX.loadImgOfUrl('@{Application.ref()}');
-                UBE_AJAX.loadImgOfUrl('@{Application.contact()}');
-                UBE_AJAX.loadImgOfUrl('@{Application.phoenixProject()}');
+            UBE_AJAX.loadPageOfUrl('@{Application.ref()}',
+                    '#ref');
 
-            }
-            else {
+            UBE_AJAX.loadPageOfUrl('@{Application.contact()}',
+                    '#contact',
+                    sendMessage);
 
+            UBE_AJAX.loadPageOfUrl('@{Application.phoenixProject()}',
+                    '#phoenixProject');
 
-                UBE_AJAX.loadPageOfUrl('@{Application.mobile()}',
-                        '#mobile', fancyTransition);
+            UbeMenu.updateMenuViaAjax('selected');
 
-                UBE_AJAX.loadPageOfUrl('@{Application.webSite()}',
-                        '#webSite');
-
-                UBE_AJAX.loadPageOfUrl('@{Application.company()}',
-                        '#company');
-
-                UBE_AJAX.loadPageOfUrl('@{Application.ref()}',
-                        '#ref');
-
-                UBE_AJAX.loadPageOfUrl('@{Application.contact()}',
-                        '#contact',
-                        sendMessage);
-
-                UBE_AJAX.loadPageOfUrl('@{Application.phoenixProject()}',
-                        '#phoenixProject');
-
-                UbeMenu.updateMenuViaAjax('selected');
-
-
-            }
 
             codaSlider();
 
