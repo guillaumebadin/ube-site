@@ -22,7 +22,7 @@ GET     /public/                                staticDir:public
 *       /web-app                                Application.webApp
 *       /site-internet                          Application.webSite
 *       /societe                                Application.company
-*       /references                             Application.ref
+*       /references                             Application.reference
 *       /contact                                Application.contact
 *       /projet-phoenix                         Application.phoenixProject
 

@@ -135,7 +135,7 @@
                     <li><a href="@{Application.webApp()}" data-link="webApp">WebApp</a></li>
                     <li><a href="@{Application.webSite()}" data-link="webSite">Site Internet</a></li>
                     <li><a href="@{Application.company()}" data-link="company">Société</a></li>
-                    <li><a href="@{Application.ref()}" data-link="ref">Références</a></li>
+                    <li><a href="@{Application.reference()}" data-link="reference">Références</a></li>
                     <li><a href="@{Application.contact()}" data-link="contact">Contacts</a></li>
                     <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix
                         ©</strong></a></li>
@@ -166,35 +166,35 @@
                 <li class="span4">
                     <h2>A propos</h2>
                     <ul>
-                        <li><a href="@{Application.company()}">Qui Sommes nous?</a></li>
-                        <li><a href="@{Application.company()}">Culture</a></li>
+                        <li><a data-link="company" href="@{Application.company()}">Qui Sommes nous?</a></li>
+                        <li><a data-link="company" href="@{Application.company()}">Culture</a></li>
                         <li><a href="http://blog.webube.com">Découvrez notre blog</a></li>
                     </ul>
                 </li>
                 <li class="span4">
                     <h2>Métiers</h2>
                     <ul>
-                        <li><a href="@{Application.webApp()}">Web App</a></li>
-                        <li><a href="@{Application.webSite()}">Site Web</a></li>
-                        <li><a href="@{Application.phoenixProject()}">Projet Phoenix</a></li>
+                        <li><a data-link="webApp" href="@{Application.webApp()}">Web App</a></li>
+                        <li><a data-link="webSite" href="@{Application.webSite()}">Site Web</a></li>
+                        <li><a data-link="phoenixProject" href="@{Application.phoenixProject()}">Projet Phoenix</a></li>
                     </ul>
                 </li>
                 <li class="span4">
                     <h2>Références</h2>
                     <ul>
-                        <li><a href="@{Application.ref()}#yakmobile">YakaMobile</a></li>
-                        <li><a href="@{Application.ref()}#yakadeal">YakaDeal</a></li>
-                        <li><a href="@{Application.ref()}#wakizz">Wakizz</a></li>
-                        <li><a href="@{Application.ref()}">Plus de références ...</a></li>
+                        <li><a data-link="reference" href="@{Application.reference()}#yakmobile">YakaMobile</a></li>
+                        <li><a data-link="reference" href="@{Application.reference()}#yakadeal">YakaDeal</a></li>
+                        <li><a data-link="reference" href="@{Application.reference()}#wakizz">Wakizz</a></li>
+                        <li><a data-link="reference" href="@{Application.reference()}">Plus de références ...</a></li>
                     </ul>
                 </li>
                 <li class="span4">
                     <h2>Recrutement</h2>
                     <ul>
-                        <li><a href="@{Application.contact()}">Postulez !</a></li>
-                        <li><a href="@{Application.contact()}">Découvrez notre R&D</a></li>
-                        <li><a href="@{Application.contact()}">Chef de projet Développeur</a></li>
-                        <li><a href="@{Application.contact()}">Trouvez votre Stage</a></li>
+                        <li><a data-link="contact" href="@{Application.contact()}">Postulez !</a></li>
+                        <li><a data-link="contact" href="@{Application.contact()}">Découvrez notre R&D</a></li>
+                        <li><a data-link="contact" href="@{Application.contact()}">Chef de projet Développeur</a></li>
+                        <li><a data-link="contact" href="@{Application.contact()}">Trouvez votre Stage</a></li>
                     </ul>
                 </li>
 
@@ -283,6 +283,25 @@
         fancyTransition();
         sendMessage();
 
+        UBE_AJAX.loadPageOfUrl('@{Application.webApp()}',
+                '#webApp', fancyTransition);
+
+        UBE_AJAX.loadPageOfUrl('@{Application.webSite()}',
+                '#webSite');
+
+        UBE_AJAX.loadPageOfUrl('@{Application.company()}',
+                '#company');
+
+        UBE_AJAX.loadPageOfUrl('@{Application.reference()}',
+                '#reference');
+
+        UBE_AJAX.loadPageOfUrl('@{Application.contact()}',
+                '#contact',
+                sendMessage);
+
+        UBE_AJAX.loadPageOfUrl('@{Application.phoenixProject()}',
+                '#phoenixProject');
+
     });
 
     /**
@@ -298,25 +317,6 @@
 
             $("#to-hide").fadeIn();
 
-
-            UBE_AJAX.loadPageOfUrl('@{Application.webApp()}',
-                    '#webApp', fancyTransition);
-
-            UBE_AJAX.loadPageOfUrl('@{Application.webSite()}',
-                    '#webSite');
-
-            UBE_AJAX.loadPageOfUrl('@{Application.company()}',
-                    '#company');
-
-            UBE_AJAX.loadPageOfUrl('@{Application.ref()}',
-                    '#ref');
-
-            UBE_AJAX.loadPageOfUrl('@{Application.contact()}',
-                    '#contact',
-                    sendMessage);
-
-            UBE_AJAX.loadPageOfUrl('@{Application.phoenixProject()}',
-                    '#phoenixProject');
 
             UbeMenu.updateMenuViaAjax('selected');
 
