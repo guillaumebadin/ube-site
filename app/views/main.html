@@ -137,8 +137,7 @@
                     <li><a href="@{Application.company()}" data-link="company">Société</a></li>
                     <li><a href="@{Application.reference()}" data-link="reference">Références</a></li>
                     <li><a href="@{Application.contact()}" data-link="contact">Contacts</a></li>
-                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix
-                        ©</strong></a></li>
+                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix<span class="super">©</span></strong></a></li>
                 </ul>
 
             </div>
@@ -202,6 +201,7 @@
             </ol>
 
         </div>
+
 
         <div class="row">
             <h4 id="copyright"><span class="super">©</span> 2011–2012 <strong>WebUbe</strong>, <strong>Projet
@@ -282,7 +282,7 @@
         UbeMenu.applyDataUbeLink('selected');
 
         fancyTransition();
-        sendMessage();
+//        sendMessage();
 
         UBE_AJAX.loadPageOfUrl('@{Application.webApp()}',
                 '#webApp', fancyTransition);

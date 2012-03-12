@@ -22,6 +22,12 @@
 
 }
 
+.info_address {
+    p{
+        font-size: 16px;
+    }
+}
+
 .btn.success {
     color: white!important;
 }
@@ -117,7 +123,7 @@ header {
         top:32px;
 
         >li {
-        display: inline;
+        display: inline-block;
             a:hover,a.selected { color: @mainH1ColorLighten; .CustomLighten;}
         }
         
@@ -393,7 +399,6 @@ header {
 
     #company {
 
-
        h1 {
         text-align: left;
        }
@@ -513,35 +518,42 @@ header {
 
         img {
             display: block;
-            margin: auto;
+            float: left;
             position: relative;
-            left:22px;
-        }
-
-        .block {
-            display: table;
-            >h1 {display: table-row;text-align: center;}
-            >img {display: table-row;}
-        }
-
-        .row {
-            display: table-row;
 
         }
 
-        .cell {
-            display: table-cell;
-            padding: 14px;
+
+        P {
+         font-size: 20px;
+         text-align: justify;
         }
 
-        #rowPres > .cell {
-            width: 50%;
-        } 
-        
-        p {
-            text-align: justify;
+        input {
+            height: 26px;
         }
-                 
+        input[type="email"] {
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            position: absolute;
+           right: 265px;
+            bottom: 5px;
+        }
+
+        p + p {
+
+            margin-top: 20px;
+
+        }
+
+        .formPhoenix {
+            position: relative;
+           margin-top: 80px;
+           display: block;
+           margin-left: 240px;
+        }
 
     }
 
@@ -649,7 +661,6 @@ footer {
     h1,h2,h3 {
         text-shadow: none;
     }
-
 }
 
 
