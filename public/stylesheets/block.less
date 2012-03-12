@@ -1,6 +1,8 @@
  @ubeGray:#4C4C4D;
     @ubeBlack:#404040;
     @ubeLight:whitesmoke;
+ @ubeBlue:#51a3d4;
+
 
 #main-content {
 
@@ -39,6 +41,13 @@
 
         }
 
+        a {
+            color: @ubeBlue;
+            
+            &:hover {
+                color: lighten(@ubeBlue,10%);
+            }
+        }
     }
 
     .offre-block {
