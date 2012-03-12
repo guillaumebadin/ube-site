@@ -17,7 +17,7 @@ public class Application extends Controller {
         render();
     }
 
-    public static void digitalFactory()
+    public static void webSite()
     {
         render();
     }
@@ -37,7 +37,7 @@ public class Application extends Controller {
         render();
     }
 
-    public static void appOcalypse()
+    public static void phoenixProject()
     {
         render();
     }

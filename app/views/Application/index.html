@@ -6,27 +6,31 @@
 
 <div id="load">
     <img src="http://c1663920.r20.cf2.rackcdn.com/logo_grand_webube.png" alt="Loading ajax webube"/>
-    <br />
-    <br />
+    <br/>
+    <br/>
     <img src="http://c1663920.r20.cf2.rackcdn.com/ajax-loader.gif" alt="Loading ajax webube"/>
 </div>
 
 
 <div id="to-hide" style="display: none">
 
-    <div id="index" class="active step"  data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+    <div id="index" class="active step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+
+
         <div id="presentation">
 
-            <img src="http://c1663920.r20.cf2.rackcdn.com/logo_grand_webube.png">
+            <h1>
+                <img src="@{'/public/images/logo_small_webube.png'}" alt="WebUbe logo">
+            </h1>
 
-            <p>Les développeurs WebUbe, véritables artisans poussés par leur passion de l’excellence portent un regard
-               neuf sur l’univers mobile et les technologies Web.</p>
+            <p>WebUbe, <strong>moteur</strong> du monde Web et mobile de demain, vous offre son <strong>savoir
+                faire</strong> pour réaliser vos projets
+                les
+                plus <strong>novateurs</strong>...</p>
 
-            <p>
-                WebUbe, articulé autour de son atelier digital et de son pôle mobile,
-                met à votre disposition son savoir-faire pour donner vie à vos projets.</p>
+            <p>Notre <strong>passion</strong> conduira vos rêves vers l’excellence.</p>
+
         </div>
-
 
         <div id="slider">
 
@@ -36,29 +40,31 @@
                 <div class="coda-slider preload" id="coda-slider">
                     <!--chaque panel est un slider-->
                     <div class="panel">
-                        <div class="panel-wrapper text">
+                        <div id="slider-webube" class="panel-wrapper text">
 
-                            <img src="http://c1663920.r20.cf2.rackcdn.com/img_mobile.png"
-                                 style="position: relative;left: -14px;"/>
+                            <img src="http://c1663920.r20.cf2.rackcdn.com/logo_grand_webube.png"
+                                 style="position: relative;top: 50px;"/>
 
-                            <div class="carroussel_desc" style="padding-left: 8px;">
-                                <h2 class="title center-title"> Mobile</h2>
+                            <div class="carroussel_desc" style="padding-left: 60px;">
+                                <h2 class="title center-title">WebUbe</h2>
                                 <!--image du slider a modifier-->
 
 
-                                <p>Le XXIe siècle sera connecté et mobile ! Porté par la vague des smartphones et des
-                                    tablettes, WebUbe s’est spécialisé dans le développement d’applications mobile
-                                    répondant à cette <br/>
-                                    révolution!</p>
+                                <p>Le <strong>Web</strong> est notre passion.</p>
 
-                                <a class="btn success right" href="@{Application.mobile()}"> En Savoir Plus !</a>
+                                <p>A la convergence du <strong>Web Mobile</strong> et de l’internet traditionnel,
+                                    WebUbe a les compétences pour <strong>porter</strong> vos projets.</p>
+
+                                <p><strong>« Nous créons des sites web, et nous le faisons bien »</strong></p>
+
+                                <a class="btn success right" href="@{Application.company()}">En Savoir Plus</a>
 
                             </div>
                         </div>
 
                         <div class="ube-slider-tab">
 
-                            <h3 class="title center-title"> Mobile</h3>
+                            <h3 class="title center-title"> WebUbe</h3>
                         </div>
                     </div>
 
@@ -66,31 +72,60 @@
                         <div class="panel-wrapper text">
 
                             <img width="560px" height="378px"
-                                 src="http://c1663920.r20.cf2.rackcdn.com/img_socialweb.png"/>
+                                 src="http://c1663920.r20.cf2.rackcdn.com/img_mobile.png"/>
 
 
                             <div class="carroussel_desc">
 
-                                <h2 class="title"> Atelier digital </h2>
+                                <h2 class="title"> Web App </h2>
 
-                                <p>Un regard neuf sur le Web et ses technologies, les ingénieurs WebUbe ne sont pas de
-                                    simples développeurs, mais des artisans portés par leurs passions. Chez WebUbe, un
-                                    site Internet se façonne avec réflexion et savoir-faire.</p>
+                                <p>Chez WebUbe, nous pensons que le futur du Web sera mobile.</p>
 
-                                <a class="btn success right" href="@{Application.digitalFactory()}"> En Savoir Plus
-                                    ! </a>
+                                <p>Après une longue phase de R&D, WebUbe à développé sa propre technologie baptisé
+                                    <strong>« Eagle © »</strong>.</p>
+
+                                <p>Nous avons définitivement comblé le fossé qui séparait les WebApp des applications
+                                    natives.</p>
+
+
+
+                                <a class="btn success right" href="@{Application.mobile()}"> En Savoir
+                                    Plus! </a>
                             </div>
                         </div>
 
                         <div class="ube-slider-tab">
 
-                            <h3 class="title"> Atelier digital </h3>
+                            <h3 class="title"> WebApp </h3>
                         </div>
                     </div>
 
 
                     <div class="panel inno_width">
                         <div class="panel-wrapper text">
+                            <img width="560px" height="378px"
+                                 src="http://c1663920.r20.cf2.rackcdn.com/img_socialweb.png"
+                                 style="margin-left: -29px !important; overflow-x: hidden !important;"/>
+
+                            <div class="carroussel_desc">
+                                <h2 class="title"> Site internet</h2>
+
+
+                                <p>WebUbe a fait de la <strong>conception</strong> de sites web à forte valeur ajoutée une de ses <strong>spécialités</strong>.</p>
+                                <p>WebUbe est une entreprise <strong>SoLoMo</strong> (Social, Locale et Mobile) ayant les compétences pour porter votre projet.</p>
+
+                                <a class="btn success" href="@{Application.phoenixProject()}"> En Savoir Plus !</a>
+                            </div>
+                        </div>
+
+                        <div class="ube-slider-tab">
+                            <h3 class="title">Site Internet</h3>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-wrapper text">
+
                             <img width="560px" height="378px"
                                  src="http://c1663920.r20.cf2.rackcdn.com/img_innovation.png"
                                  style="margin-left: -29px !important; overflow-x: hidden !important;"/>
@@ -99,41 +134,18 @@
                                 <h2 class="title"> Innovation</h2>
 
 
-                                <p>La recherche permanente d’innovation et un investissement constant en R&D confèrent à
-                                    WebUbe un savoir-faire pointu et très à jour permettant de répondre au mieux à vos
+                                <p>La recherche permanente d’innovation et un investissement constant en
+                                    <strong>R&D</strong> confèrent à
+                                    WebUbe un savoir-faire pointu permettant de répondre au mieux à vos
                                     attentes.</p>
 
-                                <a class="btn success" href="@{Application.appOcalypse()}"> En Savoir Plus !</a>
+                                <a class="btn success" href="@{Application.phoenixProject()}"> En Savoir Plus !</a>
                             </div>
                         </div>
 
                         <div class="ube-slider-tab">
 
-                            <h3 class="title"> Innovation</h3>
-                        </div>
-                    </div>
-
-                    <div class="panel">
-                        <div class="panel-wrapper text">
-
-                            <img width="560px" height="378px"
-                                 src="http://c1663920.r20.cf2.rackcdn.com/img_conseil.png"/>
-
-                            <div class="carroussel_desc">
-
-                                <h2 class="title center-title"> Conseil</h2>
-
-                                <p>L’expérience WebUbe va au-delà de la réalisation de votre projet. Être force de
-                                    proposition, vous conseiller en amont, concrétiser vos attentes et vous proposer un
-                                    suivi de qualité font partie des engagements de WebUbe.</p>
-
-                                <a class="btn success " href="@{Application.company()}"> En Savoir Plus !</a>
-                            </div>
-                        </div>
-
-                        <div class="ube-slider-tab">
-
-                            <h3 class="title center-title"> Conseil</h3>
+                            <h3 class="title center-title"> Innovation</h3>
                         </div>
                     </div>
 
@@ -144,19 +156,20 @@
 
 
                             <div class="carroussel_desc">
-                                <h2 id="appocalypse" class="title app-ocalypse">App-ocalypse</h2>
+                                <h2 id="appocalypse" class="title app-ocalypse">Projet Phoenix</h2>
 
-                                <p>Technologie cross platform de WebUbe permettant la conception d’une application
-                                    mobile universelle et son déploiement sur l’ensemble des smartphones et des
-                                    tablettes tactiles !</p>
+                                <p>La <strong>renaissance</strong> des applications mobiles pour smartphones et tablettes.</p>
+                                <p>Phoenix est un <strong>écosystème</strong> sur le cloud redéfinissant les standards de l’industrie mobile.</p>
 
-                                <a class="btn success" href="@{Application.appOcalypse()}"> En Savoir Plus !</a>
+                                <p><strong>Coming soon…</strong></p>
+
+                                <a class="btn success" href="@{Application.phoenixProject()}"> En Savoir Plus !</a>
                             </div>
                         </div>
 
                         <div class="ube-slider-tab">
 
-                            <h3 class="title center-title"> App-Ocalypse</h3>
+                            <h3 class="title center-title"> Projet Phoenix </h3>
 
                         </div>
 

@@ -132,12 +132,12 @@
             <div style="position:relative;">
 
                 <ul>
-                    <li><a href="@{Application.mobile()}" data-link="mobile">Mobile</a></li>
-                    <li><a href="@{Application.digitalFactory()}" data-link="digitalFactory">Atelier digital</a></li>
+                    <li><a href="@{Application.mobile()}" data-link="mobile">WebApp</a></li>
+                    <li><a href="@{Application.webSite()}" data-link="webSite">Site Internet</a></li>
                     <li><a href="@{Application.company()}" data-link="company">Société</a></li>
                     <li><a href="@{Application.ref()}" data-link="ref">Références</a></li>
                     <li><a href="@{Application.contact()}" data-link="contact">Contacts</a></li>
-                    <li><a href="@{Application.cloud()}" data-link="cloud">Nos Services</a></li>
+                    <li><a href="@{Application.phoenixProject()}" data-link="cloud"><strong>Projet Phoenix ©</strong></a></li>
                 </ul>
 
             </div>
@@ -173,25 +173,25 @@
                 <li class="span4">
                     <h2>Métiers</h2>
                     <ul>
-                        <li><a href="@{Application.mobile()}">Mobile multi-platforme</a></li>
-                        <li><a href="@{Application.digitalFactory()}">Atelier digitale</a></li>
-                        <li><a href="@{Application.appOcalypse()}">Appocalypse</a></li>
+                        <li><a href="@{Application.mobile()}">Web App</a></li>
+                        <li><a href="@{Application.webSite()}">Site Web</a></li>
+                        <li><a href="@{Application.phoenixProject()}">Projet Phoenix</a></li>
                     </ul>
                 </li>
                 <li class="span4">
                     <h2>Références</h2>
                     <ul>
+                        <li><a href="@{Application.ref()}#yakmobile">YakaMobile</a></li>
                         <li><a href="@{Application.ref()}#yakadeal">YakaDeal</a></li>
                         <li><a href="@{Application.ref()}#wakizz">Wakizz</a></li>
-                        <li><a href="@{Application.ref()}#cricel">Cricel</a></li>
                         <li><a href="@{Application.ref()}">Plus de références ...</a></li>
                     </ul>
                 </li>
                 <li class="span4">
                     <h2>Recrutement</h2>
                     <ul>
-                        <li><a href="@{Application.contact()}"> Postulez !</a></li>
-                        <li><a href="@{Application.contact()}"> Découvrez notre R&D</a></li>
+                        <li><a href="@{Application.contact()}">Postulez !</a></li>
+                        <li><a href="@{Application.contact()}">Découvrez notre R&D</a></li>
                         <li><a href="@{Application.contact()}">Chef de projet Développeur</a></li>
                         <li><a href="@{Application.contact()}">Trouvez votre Stage</a></li>
                     </ul>
@@ -202,7 +202,7 @@
         </div>
 
         <div class="row">
-            <h4 id="copyright">© 2011–2012 <strong>WebUbe</strong>, <strong>App-Ocalypse</strong></h4>
+            <h4 id="copyright">© 2011–2012 <strong>WebUbe</strong>, <strong>Projet Phoenix</strong>,<strong>Eagle</strong></h4>
         </div>
     </div>
 </footer>
@@ -304,7 +304,7 @@
 
 
                 UBE_AJAX.loadImgOfUrl('@{Application.mobile()}');
-                UBE_AJAX.loadImgOfUrl('@{Application.digitalFactory()}');
+                UBE_AJAX.loadImgOfUrl('@{Application.webSite()}');
                 UBE_AJAX.loadImgOfUrl('@{Application.company()}');
                 UBE_AJAX.loadImgOfUrl('@{Application.ref()}');
                 UBE_AJAX.loadImgOfUrl('@{Application.contact()}');
@@ -317,7 +317,7 @@
                 UBE_AJAX.loadPageOfUrl('@{Application.mobile()}',
                         '#mobile', fancyTransition);
 
-                UBE_AJAX.loadPageOfUrl('@{Application.digitalFactory()}',
+                UBE_AJAX.loadPageOfUrl('@{Application.webSite()}',
                         '#digitalFactory');
 
                 UBE_AJAX.loadPageOfUrl('@{Application.company()}',

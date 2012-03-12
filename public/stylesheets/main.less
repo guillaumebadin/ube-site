@@ -133,17 +133,14 @@ header {
          min-height: 800px;
 
         #presentation {
-            .clearfix;
-            margin-top:2%;
-            position: relative;
-            left: 10px;
 
-            img {max-width:60%;float: left;}
+            margin-left:8px;
 
-            p {max-width: 40%;float: left;
+            p {
+
                 text-align: justify;
-                margin-left: 4%;
-                #font.sans-serif(normal,18px,36px);
+
+                #font.sans-serif(normal,18px,30px);
             }
 
 
@@ -154,7 +151,7 @@ header {
             width: 1000px; height: 500px;
             background-repeat: no-repeat;
             position:relative;
-            left:-30px;
+            left:-10px;
             p,a {
                 .NormalTextShadow;
             }
@@ -163,6 +160,10 @@ header {
                 position: absolute;
                 bottom: 36px;
                 z-index: 999;
+            }
+
+            #slider-webube .carroussel_desc {
+                width: 360px;
             }
 
 
@@ -428,8 +429,7 @@ header {
                 top: 4px;
                 background-color:lighten(@ubeGray,10%);
             }
-        }  
-
+        }
     }
 
     #cloud {
@@ -493,7 +493,6 @@ header {
             position: relative;
             left:22px;
         }
-
     }
 
     #appFacebook {
