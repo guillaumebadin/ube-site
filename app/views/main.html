@@ -137,7 +137,7 @@
                     <li><a href="@{Application.company()}" data-link="company">Société</a></li>
                     <li><a href="@{Application.ref()}" data-link="ref">Références</a></li>
                     <li><a href="@{Application.contact()}" data-link="contact">Contacts</a></li>
-                    <li><a href="@{Application.phoenixProject()}" data-link="cloud"><strong>Projet Phoenix ©</strong></a></li>
+                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix ©</strong></a></li>
                 </ul>
 
             </div>
@@ -308,7 +308,7 @@
                 UBE_AJAX.loadImgOfUrl('@{Application.company()}');
                 UBE_AJAX.loadImgOfUrl('@{Application.ref()}');
                 UBE_AJAX.loadImgOfUrl('@{Application.contact()}');
-                UBE_AJAX.loadImgOfUrl('@{Application.cloud()}');
+                UBE_AJAX.loadImgOfUrl('@{Application.phoenixProject()}');
 
             }
             else {
@@ -318,7 +318,7 @@
                         '#mobile', fancyTransition);
 
                 UBE_AJAX.loadPageOfUrl('@{Application.webSite()}',
-                        '#digitalFactory');
+                        '#webSite');
 
                 UBE_AJAX.loadPageOfUrl('@{Application.company()}',
                         '#company');
@@ -330,8 +330,8 @@
                         '#contact',
                         sendMessage);
 
-                UBE_AJAX.loadPageOfUrl('@{Application.cloud()}',
-                        '#cloud');
+                UBE_AJAX.loadPageOfUrl('@{Application.phoenixProject()}',
+                        '#phoenixProject');
 
                 UbeMenu.updateMenuViaAjax('selected');
 

@@ -72,7 +72,7 @@ var UbeMenu = function () {
 
                     history.pushState('', '', dataLink);
 
-                    _UbeUi.ubeSlide(idToRemove, idToShow);
+                    _UbeUi.ubeReplace(idToRemove, idToShow);
                 }
 
             });
@@ -221,9 +221,43 @@ var _UbeUi = (function () {
             });
     };
 
+    var ubeReplace = function (idToRemove, idToShow) {
+
+
+        // We add block class during animation
+        $(idToRemove).addClass('isAnimating');
+        $(idToShow).addClass('isAnimating');
+
+        $(idToRemove).fadeOut('slow',function(){
+            $(idToShow).fadeIn('slow');
+        });
+
+
+        // Animation is ending we remove block class
+        $(idToRemove).removeClass('isAnimating');
+        $(idToShow).removeClass('isAnimating');
+
+
+//        $(idToRemove).transition({ scale:0.8 }, 2000, 'ease').
+//            transition({ x:'-4000px'}, 500, 'ease', function () {
+//
+//                $(this).css('display', 'none');
+//
+//                $(idToShow).css({x:'4000px'}).show().
+//                    transition({ scale:0.8 }).
+//                    transition({x:'0'}, 500, 'ease').
+//                    transition({ scale:1 }, 2000, 'ease');
+//
+//                // Animation is ending we remove block class
+//                $(idToRemove).removeClass('isAnimating');
+//                $(idToShow).removeClass('isAnimating');
+//            });
+    };
+
 
     return {
-        ubeSlide:ubeSlide
+        ubeSlide:ubeSlide,
+        ubeReplace:ubeReplace
     }
 
 })();
