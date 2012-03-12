@@ -10,21 +10,21 @@
         <loc>http://webube.com/</loc>
     </url>
     <url>
-        <loc>http://webube.com/application/mobile</loc>
+        <loc>http://webube.com/web-app</loc>
     </url>
     <url>
-        <loc>http://webube.com/application/digitalfactory</loc>
+        <loc>http://webube.com/site-web</loc>
     </url>
     <url>
-        <loc>http://webube.com/application/company</loc>
+        <loc>http://webube.com/societe</loc>
     </url>
     <url>
-        <loc>http://webube.com/application/ref</loc>
+        <loc>http://webube.com/references</loc>
     </url>
     <url>
-        <loc>http://webube.com/application/contact</loc>
+        <loc>http://webube.com/contact</loc>
     </url>
     <url>
-        <loc>http://webube.com/application/appocalypse</loc>
+        <loc>http://webube.com/projet-phoenix</loc>
     </url>
 </urlset>
