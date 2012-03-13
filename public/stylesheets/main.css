@@ -2465,8 +2465,47 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
+.center {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  width: 130px;
+  position: relative;
+  left: 22px;
+}
+.imgWebApp {
+  margin-top: 20px;
+}
+.info_address p {
+  font-size: 16px;
+}
+.btn.success {
+  color: white!important;
+}
+.super {
+  vertical-align: super;
+  font-size: 14px;
+}
+.btn.success {
+  opacity: 1;
+}
+#imgPhoenixSend {
+  width: 139px;
+  position: absolute;
+  right: 23px;
+  bottom: 99px;
+}
 html {
   background-color: #000000;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: Helvetica, Arial;
 }
 body {
   background-color: #f5f5f5;
@@ -2487,6 +2526,12 @@ h4 {
 }
 .CustomLighten {
   text-shadow: 0 0 10px #ffffff;
+}
+#send {
+  position: absolute;
+  right: 23px;
+  bottom: 48px;
+  width: 136px;
 }
 a {
   color: inherit;
@@ -2545,7 +2590,7 @@ header ul {
   top: 32px;
 }
 header ul > li {
-  display: inline;
+  display: inline-block;
 }
 header ul > li a:hover, header ul > li a.selected {
   color: #f79d51;
@@ -2578,35 +2623,17 @@ header ul a {
   line-height: 23px;
 }
 #main-content #index {
-  min-height: 800px;
+  min-height: 600px;
 }
 #main-content #index #presentation {
-  zoom: 1;
-  margin-top: 2%;
-  position: relative;
-  left: 10px;
-}
-#main-content #index #presentation:before, #main-content #index #presentation:after {
-  display: table;
-  content: "";
-  zoom: 1;
-}
-#main-content #index #presentation:after {
-  clear: both;
-}
-#main-content #index #presentation img {
-  max-width: 60%;
-  float: left;
+  margin: 0 28px;
 }
 #main-content #index #presentation p {
-  max-width: 40%;
-  float: left;
   text-align: justify;
-  margin-left: 4%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
-  line-height: 36px;
+  line-height: 30px;
 }
 #main-content #index #slider {
   background-image: url("http://c1663920.r20.cf2.rackcdn.com/fond_carrousel.png");
@@ -2614,7 +2641,7 @@ header ul a {
   height: 500px;
   background-repeat: no-repeat;
   position: relative;
-  left: -30px;
+  left: -10px;
 }
 #main-content #index #slider p, #main-content #index #slider a {
   text-shadow: #233133 -1px -1px 1px;
@@ -2623,6 +2650,17 @@ header ul a {
   position: absolute;
   bottom: 36px;
   z-index: 999;
+}
+#main-content #index #slider #slider-webube .carroussel_desc {
+  width: 360px;
+  float: right;
+  right: 78px;
+}
+#main-content #index #slider #slider-webApp .carroussel_desc {
+  width: 315px;
+}
+#main-content #index #slider #slider-phoenixProject .carroussel_desc {
+  width: 317px;
 }
 #main-content #index #slider .panel {
   height: 400px;
@@ -2633,9 +2671,9 @@ header ul a {
 }
 #main-content #index #slider .panel .carroussel_desc {
   padding-left: 16px;
-  padding-top: 8px;
-  width: 300px;
-  height: 380px;
+  padding-top: 50px;
+  width: 340px;
+  height: 340px;
   float: left;
   position: relative;
 }
@@ -2644,6 +2682,7 @@ header ul a {
 }
 #main-content #index #slider .panel p {
   color: #bfbfbf;
+  text-align: justify;
 }
 #main-content #index #slider .panel a {
   position: absolute;
@@ -2699,52 +2738,61 @@ header ul a {
   color: #d9d9d9;
   text-shadow: 0 0 10px #ffffff;
 }
-#main-content #mobile .block h1 {
+#main-content .block h1 {
   text-align: center;
 }
-#main-content #mobile .block #mobileTopPage {
+#main-content .block h2 {
+  margin: 30px 0 20px 0;
+}
+#main-content .block img {
+  display: block;
+  margin: auto;
+}
+#main-content #webApp .block h1 {
+  text-align: center;
+}
+#main-content #webApp .block img {
+  display: block;
+  margin: auto;
+}
+#main-content #webApp .block #mobileTopPage {
   zoom: 1;
   margin-top: 40px;
 }
-#main-content #mobile .block #mobileTopPage:before, #main-content #mobile .block #mobileTopPage:after {
+#main-content #webApp .block #mobileTopPage:before, #main-content #webApp .block #mobileTopPage:after {
   display: table;
   content: "";
   zoom: 1;
 }
-#main-content #mobile .block #mobileTopPage:after {
+#main-content #webApp .block #mobileTopPage:after {
   clear: both;
 }
-#main-content #mobile .block #leftMobile {
+#main-content #webApp .block #leftMobile {
   float: left;
   width: 50%;
 }
-#main-content #mobile .block #kiosque {
+#main-content #webApp .block #kiosque {
   float: right;
 }
-#main-content #mobile .block p + p {
+#main-content #webApp .block h2 {
+  margin: 30px 0 20px 0;
+}
+#main-content #webApp .block #mobileBottomPage {
   margin-top: 50px;
 }
-#main-content #mobile .block #mobileBottomPage {
-  margin-top: 50px;
-}
-#main-content #mobile .block #mobileBottomPage img {
+#main-content #webApp .block #mobileBottomPage img {
   float: left;
 }
-#main-content #mobile .block #mobileBottomPage #slideshowHolder {
+#main-content #webApp .block #mobileBottomPage #slideshowHolder {
   float: right;
   margin-right: 42px;
 }
-#main-content #mobile .contact-center p + p {
+#main-content #webApp .contact-center p + p {
   text-align: center;
   margin-top: 0px;
 }
-#main-content #digitalFactory p + p {
-  margin-top: 50px;
-}
-#main-content #digitalFactory .block a {
-  position: absolute;
-  bottom: 20px;
-  left: 345px;
+#main-content #company h1 {
+  text-align: left;
 }
 #main-content #company #qualityIllustration {
   margin-right: 82px;
@@ -2799,17 +2847,19 @@ header ul a {
   padding-top: 35px;
 }
 #main-content #contact #contactTextArea {
-  width: 890px;
-  height: 100px;
+  height: 152px;
 }
-#main-content #ref img {
+#main-content #reference img {
   float: left;
   margin-right: 30px;
 }
-#main-content #ref .block {
+#main-content #reference .block {
   cursor: pointer;
 }
-#main-content #ref .block:hover {
+#main-content #reference .block h1 {
+  text-align: left;
+}
+#main-content #reference .block:hover {
   cursor: pointer;
   position: relative;
   left: 8px;
@@ -2831,41 +2881,34 @@ header ul a {
   top: 4px;
   background-color: #656567;
 }
-#main-content #appOcalypse img {
+#main-content #phoenixProject img {
   display: block;
-  margin: auto;
+  float: left;
   position: relative;
-  left: 22px;
 }
-#main-content #appOcalypse .block {
-  display: table;
-}
-#main-content #appOcalypse .block > h1 {
-  display: table-row;
-  text-align: center;
-}
-#main-content #appOcalypse .block > img {
-  display: table-row;
-}
-#main-content #appOcalypse .row {
-  display: table-row;
-}
-#main-content #appOcalypse .cell {
-  display: table-cell;
-  padding: 14px;
-}
-#main-content #appOcalypse #rowPres > .cell {
-  width: 50%;
-}
-#main-content #appOcalypse p {
+#main-content #phoenixProject P {
+  font-size: 20px;
   text-align: justify;
 }
-#main-content #appOcalypse .center {
-  display: block;
-  margin: auto;
-  width: 130px;
+#main-content #phoenixProject input {
+  height: 26px;
+}
+#main-content #phoenixProject input[type="email"] {
+  font-size: 16px;
+}
+#main-content #phoenixProject input[type="submit"] {
+  position: absolute;
+  right: 255px;
+  bottom: 5px;
+}
+#main-content #phoenixProject p + p {
+  margin-top: 20px;
+}
+#main-content #phoenixProject .formPhoenix {
   position: relative;
-  left: 22px;
+  margin-top: 80px;
+  display: block;
+  margin-left: 250px;
 }
 #main-content #appFacebook .block #logo-phoenixbox {
   background-image: url("http://c1663920.r20.cf2.rackcdn.com/PhoenixBoxLogoFinalSite.png");
@@ -3149,6 +3192,12 @@ a.web-page {
   text-align: justify;
   list-style: inside;
 }
+#main-content .block a {
+  color: #51a3d4;
+}
+#main-content .block a:hover {
+  color: #7ab9de;
+}
 #main-content .offre-block {
   width: 250px;
   height: 350px;
@@ -3203,7 +3252,7 @@ a.web-page {
   -moz-border-radius: 30px;
   border-radius: 30px;
   background-color: #f5f5f5;
-  padding: 30px;
+  padding: 26px;
 }
 #main-content .block-light:before, #main-content .block-light:after {
   display: table;
@@ -3227,6 +3276,7 @@ a.web-page {
 #main-content .block-light.info_address {
   position: absolute;
   right: 30px;
+  top: 98px;
 }
 .polaroid {
   /* By default, we tilt all our images -2 degrees */

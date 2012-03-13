@@ -252,30 +252,6 @@ var UBE_AJAX = (function () {
 var _UbeUi = (function () {
     'use strict';
 
-
-    var ubeSlide = function (idToRemove, idToShow) {
-
-
-        // We add block class during animation
-        $(idToRemove).addClass('isAnimating');
-        $(idToShow).addClass('isAnimating');
-
-        $(idToRemove).transition({ scale:0.8 }, 2000, 'ease').
-            transition({ x:'-4000px'}, 500, 'ease', function () {
-
-                $(this).css('display', 'none');
-
-                $(idToShow).css({x:'4000px'}).show().
-                    transition({ scale:0.8 }).
-                    transition({x:'0'}, 500, 'ease').
-                    transition({ scale:1 }, 2000, 'ease');
-
-                // Animation is ending we remove block class
-                $(idToRemove).removeClass('isAnimating');
-                $(idToShow).removeClass('isAnimating');
-            });
-    };
-
     var ubeReplace = function (idToRemove, idToShow) {
 
 
@@ -292,26 +268,11 @@ var _UbeUi = (function () {
         $(idToRemove).removeClass('isAnimating');
         $(idToShow).removeClass('isAnimating');
 
-
-//        $(idToRemove).transition({ scale:0.8 }, 2000, 'ease').
-//            transition({ x:'-4000px'}, 500, 'ease', function () {
-//
-//                $(this).css('display', 'none');
-//
-//                $(idToShow).css({x:'4000px'}).show().
-//                    transition({ scale:0.8 }).
-//                    transition({x:'0'}, 500, 'ease').
-//                    transition({ scale:1 }, 2000, 'ease');
-//
-//                // Animation is ending we remove block class
-//                $(idToRemove).removeClass('isAnimating');
-//                $(idToShow).removeClass('isAnimating');
-//            });
     };
 
 
     return {
-        ubeSlide:ubeSlide,
+
         ubeReplace:ubeReplace
     }
 
