@@ -5,12 +5,67 @@
  * Time: 23:25
  * To change this template use File | Settings | File Templates.
  */
+
+var UbeHistory = {
+    history:null,
+
+    init:function()
+    {
+        UbeHistory.history = window.History; // Note: We are using a capital H instead of a lower h
+
+        if ( !History.enabled ) {
+            // History.js is disabled for this browser.
+            // This is because we can optionally choose to support HTML4 browsers or not.
+            return false;
+        }
+
+        // Bind to StateChange Event
+        UbeHistory.history.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+            var State = UbeHistory.history.getState(); // Note: We are using History.getState() instead of event.state
+            UbeHistory.history.log(State.data, State.title, State.url);
+        });
+    }
+};
+
+(function(window,undefined){
+
+    // Check Location
+
+    // Establish Variables
+    var
+        History = window.History, // Note: We are using a capital H instead of a lower h
+        State = History.getState(),
+        $log = $('#log');
+
+
+
+
+    // Log Initial State
+    // console.log('initial:', State.data, State.title, State.url);
+
+    // Bind to State Change
+    History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+        // Log the State
+        var State = History.getState(); // Note: We are using History.getState() instead of event.state
+//        console.log('statechange:', State.data, State.title, State.url);
+    });
+
+
+    UbeHistory.history = History;
+
+})(window);
+
+
 var UbeMenu = function () {
 
     /**
      * You must use strict option for javascript
      */
     'use strict';
+
+
+
+
 
 
     /**
@@ -70,7 +125,7 @@ var UbeMenu = function () {
 
                     $(idToShow).addClass('active');
 
-                    history.pushState('', '', dataLink);
+                    UbeHistory.history.pushState({}, 'state', dataLink);
 
                     _UbeUi.ubeReplace(idToRemove, idToShow);
                 }
