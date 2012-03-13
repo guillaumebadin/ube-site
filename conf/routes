@@ -6,11 +6,11 @@
 GET     /                                       Application.index
 
 # Ignore favicon requests
-GET     /favicon.ico                            404
+GET     /favicon.ico                            staticFile:/public/images/phoenix-only-ico.png
 
 *       /robots.txt                             staticFile:/public/robots.txt
 *       /sitemap.xml                            staticFile:/public/sitemap.xml
-*       /phoenix-project-demo                       staticFile:/public/phoenix-project-demo.html
+*       /phoenix-project-demo                   staticFile:/public/phoenix-project-demo.html
 
 
 
