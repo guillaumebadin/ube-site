@@ -125,7 +125,7 @@ var UbeMenu = function () {
 
                     $(idToShow).addClass('active');
 
-                    UbeHistory.history.pushState({}, 'state', dataLink);
+                    UbeHistory.history.pushState({}, '', dataLink);
 
                     _UbeUi.ubeReplace(idToRemove, idToShow);
                 }

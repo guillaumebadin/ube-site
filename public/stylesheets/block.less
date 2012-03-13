@@ -99,7 +99,7 @@
         .clearfix;
         .border-radius(@radius);
         background-color:@ubeLight;
-        padding: @radius;
+        padding: @radius - 4;
 
         p { color: @ubeBlack; text-shadow: none; }
          
@@ -114,8 +114,10 @@
 
         &.info_address {
 
+
             position: absolute;
-            right: @radius;
+            right: @radius ;
+            top:98px;
         }
     }
 
