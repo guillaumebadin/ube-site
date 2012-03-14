@@ -2495,21 +2495,29 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   right: 23px;
   bottom: 99px;
 }
+.ie #imgPhoenixSend {
+  bottom: -162px;
+}
 html {
   background-color: #000000;
 }
-body,
-p,
+body, p {
+  /*font-family: "adelle",serif!important;*/
+
+  font-family: "alber-new-web", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
 h1,
 h2,
 h3,
-h4,
-p {
-  font-family: Helvetica, Arial;
+h4 {
+  /*font-family: "adelle",serif!important;*/
+
+  font-family: "alber-new-web", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
 }
 body {
   background-color: #f5f5f5;
-  -webkit-font-smoothing: antialiased;
 }
 .OrangeTextShadow {
   text-shadow: #233133 -1px -1px 1px;

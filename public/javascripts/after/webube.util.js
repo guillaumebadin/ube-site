@@ -5,7 +5,7 @@
  * Time: 23:25
  * To change this template use File | Settings | File Templates.
  */
-
+'use strict';
 var UbeHistory = {
     history:null,
 
@@ -27,17 +27,15 @@ var UbeHistory = {
     }
 };
 
+'use strict';
 (function(window,undefined){
 
     // Check Location
 
     // Establish Variables
-    var
-        History = window.History, // Note: We are using a capital H instead of a lower h
+    var History = window.History, // Note: We are using a capital H instead of a lower h
         State = History.getState(),
         $log = $('#log');
-
-
 
 
     // Log Initial State
@@ -50,23 +48,16 @@ var UbeHistory = {
 //        console.log('statechange:', State.data, State.title, State.url);
     });
 
-
     UbeHistory.history = History;
 
 })(window);
 
-
+'use strict';
 var UbeMenu = function () {
 
     /**
      * You must use strict option for javascript
      */
-    'use strict';
-
-
-
-
-
 
     /**
      *
@@ -101,7 +92,6 @@ var UbeMenu = function () {
 
 
             $(this).click(function (event) {
-
 
 
                 event.preventDefault();
@@ -160,10 +150,10 @@ var UbeMenu = function () {
     }
 }();
 
-
+'use strict';
 var UBE_AJAX = (function () {
 
-    'use strict';
+
 
     /**
      * This method post a form via ajax.
@@ -278,9 +268,10 @@ var _UbeUi = (function () {
 
 })();
 
+'use strict';
 var _UbeUtil = (function () {
 
-    'use strict';
+
 
     var userAgent = navigator.userAgent.toLowerCase();
     jQuery.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
@@ -381,7 +372,6 @@ var _UbeUtil = (function () {
         }
 
         alertCpt = alertCpt + 1;
-
     }
 
     function showCptAlert() {
