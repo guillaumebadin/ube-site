@@ -17,7 +17,7 @@ public class Application extends Controller {
             mobileAgent = user_agent.indexOf(keyWords[i]);
 
         if (mobileAgent > 0)
-            redirect("/appocalypse-demo");
+            redirect("/phoenix-project-demo");
     }
 
     public static void index()
