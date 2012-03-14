@@ -2588,9 +2588,10 @@ header div.container {
   margin-top: 0;
 }
 header #logo-header {
-  margin-left: 0px;
   position: relative;
   top: 4px;
+  left: 0px;
+  margin-left: 0;
 }
 header ul {
   position: absolute;
@@ -2632,6 +2633,8 @@ header ul a {
 }
 #main-content #index {
   min-height: 600px;
+  position: relative;
+  left: -20px;
 }
 #main-content #index #presentation {
   margin: 0 28px;
