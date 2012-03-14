@@ -6,7 +6,9 @@
 GET     /                                       Application.index
 
 # Ignore favicon requests
-GET     /favicon.ico                            staticFile:/public/images/phoenix-only-ico.png
+GET     /favicon.ico                            staticFile:/public/images/favicon.ico
+GET     /favicon.png                            staticFile:/public/images/favicon.png
+
 
 *       /robots.txt                             staticFile:/public/robots.txt
 *       /sitemap.xml                            staticFile:/public/sitemap.xml

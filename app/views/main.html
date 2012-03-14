@@ -58,7 +58,7 @@
     <!-- =PROD STYLESHEET -->
 
 #{get 'moreStyles' /}
-    <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
 
 *{<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"}*
 *{charset="${_response_encoding}"></script>}*
@@ -75,6 +75,10 @@
 
         :-moz-any-link:focus {
             outline: none;
+        }
+
+        a,a:hover, a:active, a:focus {
+            outline: 0;
         }
 
     </style>
