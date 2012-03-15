@@ -2590,7 +2590,7 @@ header div.container {
 header #logo-header {
   position: relative;
   top: 4px;
-  left: 30px;
+  left: 0;
   margin-left: 0;
 }
 header ul {
