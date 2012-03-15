@@ -21,6 +21,7 @@
     <title>#{get 'title' /}</title>
     <meta charset="${_response_encoding}">
     <link rel="icon" type="image/png" href="/favicon.png" />
+
     <meta name="google-site-verification" content="swcB75hGfi1gkvkbgdeHv6zXyi2Tay4MN9eHfvnm0bY"/>
     <meta name="description" content="#{get 'description' /}">
     <meta name="author" content="#{get 'author' /}">
@@ -48,7 +49,7 @@
 
 #{/if}
 #{else }
-    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.v8.css'}">
+    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.v9.css'}">
 #{/else}
 
     <!-- =DEV STYLESHEET -->
@@ -249,7 +250,7 @@
 #{/if}
 #{else}
 
-<script type="text/javascript" src="@{'/public/javascripts/after.v8.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/after.v9.js'}"></script>
 *{We remove bootstrap-modal because there is a bug with google javascript compressor}*
 <script type="text/javascript" src="@{'/public/javascripts/after/bootstrap-modal-1.4.js'}"></script>
 
