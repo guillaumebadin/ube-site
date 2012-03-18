@@ -58,14 +58,14 @@ html {
 }
 
 body,p, li{
-     /*font-family: "adelle",serif!important;*/
+
      font-family: 'PlanerRegular', "alber-new-web",sans-serif!important;
      -webkit-font-smoothing: antialiased;
-     color: #dbdbdb !important;
 }
 
 h1,h2,h3,h4, a {
      /*font-family: "adelle",serif!important;*/
+     font-weight: 100;
      font-family: 'PlanerBold', 'PlanerRegular', "alber-new-web",sans-serif!important;
      -webkit-font-smoothing: antialiased;
 }
@@ -260,7 +260,8 @@ header {
                     }
 
                     p {
-                        color:@grayLight;
+
+                        color: #dbdbdb!important;
                         text-align: justify;
                        }
 
@@ -281,7 +282,8 @@ header {
             .coda-nav {
 
                 h3 {
-                     color: @grayLight;
+
+                      color: #dbdbdb!important;
                      .NormalTextShadow;
 
                     &.app-ocalypse {
@@ -366,6 +368,10 @@ header {
             img {
                 display: block;
                 margin: auto;
+            }
+
+            p,li {
+                  color: #dbdbdb!important;
             }
 
     }
@@ -638,7 +644,7 @@ footer {
 
 
     a,h4 {
-        color: @footerLink;
+        color: #dbdbdb!important;
 
         &:hover {
             color: @footerLinkLighten;

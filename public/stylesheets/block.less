@@ -1,6 +1,6 @@
  @ubeGray:#4C4C4D;
-    @ubeBlack:#404040;
-    @ubeLight:whitesmoke;
+ @ubeBlack:#404040;
+ @ubeLight:whitesmoke;
  @ubeBlue:#51a3d4;
 
 
@@ -13,8 +13,7 @@
     @ubeGray:#4C4C4D;
     @ubeBlack:#404040;
     @ubeLight:whitesmoke;
-    @textColor:#BFBFBF;
-
+    @textColor:#dbdbdb;
 
     .block {
 
@@ -35,7 +34,7 @@
 
         p,li {
             .NormalTextShadow();
-            color: @textColor;
+            color: @textColor!important;
             text-align: justify;
             list-style: inside;
 
@@ -69,7 +68,7 @@
 
                 p,li {
                     .NormalTextShadow();
-                    color: @textColor;
+                    color: @textColor!important;
                     text-align: justify;
                     /*text-align: left;*/
                     list-style: inside;
@@ -101,7 +100,7 @@
         background-color:@ubeLight;
         padding: @radius - 4;
 
-        p { color: @ubeBlack; text-shadow: none; }
+        p { color: @ubeBlack!important; text-shadow: none; }
          
         a {color: @blue;
         
