@@ -2623,19 +2623,20 @@ html {
   background-color: #000000;
 }
 body,
-p {
-  /*font-family: "adelle",serif!important;*/
-
-  font-family: "alber-new-web", sans-serif !important;
+p,
+li {
+  font-family: 'PlanerRegular', "alber-new-web", sans-serif !important;
   -webkit-font-smoothing: antialiased;
 }
 h1,
 h2,
 h3,
-h4 {
+h4,
+a {
   /*font-family: "adelle",serif!important;*/
 
-  font-family: "alber-new-web", sans-serif !important;
+  font-weight: 100;
+  font-family: 'PlanerBold', 'PlanerRegular', "alber-new-web", sans-serif !important;
   -webkit-font-smoothing: antialiased;
 }
 body {
@@ -2817,7 +2818,7 @@ header ul a {
   text-align: center;
 }
 #main-content #index #slider .panel p {
-  color: #bfbfbf;
+  color: #dbdbdb!important;
   text-align: justify;
 }
 #main-content #index #slider .panel a {
@@ -2830,7 +2831,7 @@ header ul a {
   margin: 0;
 }
 #main-content #index .coda-nav h3 {
-  color: #bfbfbf;
+  color: #dbdbdb!important;
   text-shadow: #233133 -1px -1px 1px;
 }
 #main-content #index .coda-nav h3.app-ocalypse {
@@ -2883,6 +2884,10 @@ header ul a {
 #main-content .block img {
   display: block;
   margin: auto;
+}
+#main-content .block p,
+#main-content .block li {
+  color: #dbdbdb!important;
 }
 #main-content #webApp .block h1 {
   text-align: center;
@@ -3090,7 +3095,7 @@ footer {
 }
 footer a,
 footer h4 {
-  color: #a6a6a6;
+  color: #dbdbdb!important;
 }
 footer a:hover,
 footer h4:hover {
@@ -3334,7 +3339,7 @@ a.web-page {
 #main-content .block p,
 #main-content .block li {
   text-shadow: #233133 -1px -1px 1px;
-  color: #bfbfbf;
+  color: #dbdbdb !important;
   text-align: justify;
   list-style: inside;
 }
@@ -3367,7 +3372,7 @@ a.web-page {
 #main-content .offre-block p,
 #main-content .offre-block li {
   text-shadow: #233133 -1px -1px 1px;
-  color: #bfbfbf;
+  color: #dbdbdb !important;
   text-align: justify;
   /*text-align: left;*/
 
@@ -3413,7 +3418,7 @@ a.web-page {
   clear: both;
 }
 #main-content .block-light p {
-  color: #404040;
+  color: #404040 !important;
   text-shadow: none;
 }
 #main-content .block-light a {
