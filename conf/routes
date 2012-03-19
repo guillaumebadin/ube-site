@@ -3,7 +3,10 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+GET     {host}/                                 Application.index
+
+#Mobile page
+#GET     mobile.webube.com/                     staticFile:/public/eagle-technology.html
 
 # Ignore favicon requests
 GET     /favicon.ico                            staticFile:/public/images/favicon.ico
@@ -12,7 +15,7 @@ GET     /favicon.png                            staticFile:/public/images/favico
 
 *       /robots.txt                             staticFile:/public/robots.txt
 *       /sitemap.xml                            staticFile:/public/sitemap.xml
-*       /phoenix-project-demo                   staticFile:/public/phoenix-project-demo.html
+
 
 
 
