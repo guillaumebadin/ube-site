@@ -17,7 +17,7 @@ public class Application extends Controller {
             mobileAgent = user_agent.indexOf(keyWords[i]);
 
         if (mobileAgent > 0)
-            redirect("/public/eagle-technology.html");
+            redirect("http://m.webube.com");
     }
 
 
