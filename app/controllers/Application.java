@@ -1,5 +1,9 @@
 package controllers;
 
+import nl.bitwalker.useragentutils.BrowserType;
+import nl.bitwalker.useragentutils.Manufacturer;
+import nl.bitwalker.useragentutils.OperatingSystem;
+import nl.bitwalker.useragentutils.UserAgent;
 import play.*;
 import play.mvc.*;
 
@@ -10,15 +14,39 @@ public class Application extends Controller {
 
     private static void checkMobile() {
         String user_agent = request.headers.get("user-agent").value();
+
+
         String[] keyWords = {"iPad", "iPhone", "Android", "BlackBerry"};
 
+        UserAgent ua = new UserAgent(user_agent);
 
-        for (String keyword : keyWords) {
-            if (user_agent.contains(keyword) ||
-                    user_agent.contains(keyword.toLowerCase()) ||
-                    user_agent.contains(keyword.toUpperCase()))
+        if (ua.getOperatingSystem().isMobileDevice())
+        {
+            
+            int version = Integer.valueOf(ua.getBrowserVersion().getMajorVersion());
+
+                    
+            if (0 == ua.getOperatingSystem().getManufacturer().compareTo(Manufacturer.GOOGLE))
+            {
+                Logger.info("Android");
+
+                if (version >= 4)
+                    redirect("http://m.webube.com");
+
+            } else if (0 == ua.getOperatingSystem().getManufacturer().compareTo(Manufacturer.BLACKBERRY)) {
+                Logger.info("Blackberry");
+
+                if (version >= 6)
+                    redirect("http://m.webube.com");
+            }
+            else if (0 == ua.getOperatingSystem().getManufacturer().compareTo(Manufacturer.APPLE)) {
+                Logger.info("iPhone");
                 redirect("http://m.webube.com");
+            }
         }
+        
+        
+
 
     }
 
@@ -26,6 +54,7 @@ public class Application extends Controller {
     public static void index(String host) {
 
         Logger.info(host);
+
 
         if ("m.webube.com".equals(host))
             renderTemplate("Application/eagle-technology.html");
