@@ -11,15 +11,16 @@ public class Application extends Controller {
     private static void checkMobile() {
         String user_agent = request.headers.get("user-agent").value();
         String[] keyWords = {"iPad", "iPhone", "Android", "BlackBerry"};
-        int mobileAgent = -1;
 
-        for (int i = 0; i < keyWords.length && mobileAgent < 0; i++)
-            mobileAgent = user_agent.indexOf(keyWords[i]);
 
-        if (mobileAgent > 0)
-            redirect("http://m.webube.com");
+        for (String keyword : keyWords) {
+            if (user_agent.contains(keyword) ||
+                    user_agent.contains(keyword.toLowerCase()) ||
+                    user_agent.contains(keyword.toUpperCase()))
+                redirect("http://m.webube.com");
+        }
+
     }
-
 
 
     public static void index(String host) {
