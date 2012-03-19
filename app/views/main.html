@@ -16,7 +16,6 @@
 <html>
 <!-- <![endif]-->
 <head>
-    <!--<script src="http://livejs.com/live.js" type="text/javascript"></script>-->
 
     <title>#{get 'title' /}</title>
     <meta charset="${_response_encoding}">
@@ -64,7 +63,8 @@
 *{<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"}*
 *{charset="${_response_encoding}"></script>}*
 
-    <script src="@{'public/javascripts/jquery-1.7.1.min.js'}" type="text/javascript"></script>
+<script src="@{'public/javascripts/jquery-1.7.1.min.js'}" type="text/javascript"></script>
+
 #{get 'moreScripts' /}
 
     <style type="text/css">
