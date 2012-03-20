@@ -12,41 +12,19 @@ import java.util.ArrayList;
 
 public class Application extends Controller {
 
+
+
     private static void checkMobile() {
         String user_agent = request.headers.get("user-agent").value();
-
-
         String[] keyWords = {"iPad", "iPhone", "Android", "BlackBerry"};
 
-        UserAgent ua = new UserAgent(user_agent);
 
-        if (ua.getOperatingSystem().isMobileDevice())
-        {
-            
-            int version = Integer.valueOf(ua.getBrowserVersion().getMajorVersion());
-
-                    
-            if (0 == ua.getOperatingSystem().getManufacturer().compareTo(Manufacturer.GOOGLE))
-            {
-                Logger.info("Android");
-
-                if (version >= 4)
-                    redirect("http://m.webube.com");
-
-            } else if (0 == ua.getOperatingSystem().getManufacturer().compareTo(Manufacturer.BLACKBERRY)) {
-                Logger.info("Blackberry");
-
-                if (version >= 6)
-                    redirect("http://m.webube.com");
-            }
-            else if (0 == ua.getOperatingSystem().getManufacturer().compareTo(Manufacturer.APPLE)) {
-                Logger.info("iPhone");
+        for (String keyword : keyWords) {
+            if (user_agent.contains(keyword) ||
+                    user_agent.contains(keyword.toLowerCase()) ||
+                    user_agent.contains(keyword.toUpperCase()))
                 redirect("http://m.webube.com");
-            }
         }
-        
-        
-
 
     }
 
