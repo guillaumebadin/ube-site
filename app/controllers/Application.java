@@ -74,4 +74,8 @@ public class Application extends Controller {
         render();
     }
 
+    public static void mobileApp() {
+        renderTemplate("Application/eagle-technology.html");
+    }
+
 }
