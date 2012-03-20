@@ -19,6 +19,7 @@ GET     /favicon.png                            staticFile:/public/images/favico
 
 
 
+
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
@@ -30,7 +31,7 @@ GET     /public/                                staticDir:public
 *       /references                             Application.reference
 *       /contact                                Application.contact
 *       /projet-phoenix                         Application.phoenixProject
-
+*       /mobile-app                             Application.mobileApp
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
