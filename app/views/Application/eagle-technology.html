@@ -10,6 +10,11 @@
 
     <script type="text/javascript" src="http://c861891.r91.cf3.rackcdn.com/webube.mobile.util_v2.js"></script>
     <script type="text/javascript">
+        // We redirect if we are not in webkit
+        if (!UbeMobUtil.isWebkit) {
+            document.location.href = "http://webube.com";
+        }
+
         // We test the device
         if (UbeMobUtil.isIPhone) {
             UbeMobUtil.loadCss("http://c861891.r91.cf3.rackcdn.com/ubeHigh_v3.css");
