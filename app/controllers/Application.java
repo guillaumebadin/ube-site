@@ -31,7 +31,6 @@ public class Application extends Controller {
     public static void index(String host) {
 
         Logger.info(host);
-        renderTemplate("Application/eagle-technology.html");
 
         if ("m.webube.com".equals(host))
             renderTemplate("Application/eagle-technology.html");
