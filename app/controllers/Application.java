@@ -17,15 +17,18 @@ public class Application extends Controller {
     private static void checkMobile() {
         String user_agent = request.headers.get("user-agent").value();
         String[] keyWords = {"iPad", "iPhone", "Android", "BlackBerry"};
-
+        String webkit = "WebKit";
+        boolean isWebkit = user_agent.contains(webkit) || user_agent.contains(webkit) || user_agent.contains(webkit);
 
         for (String keyword : keyWords) {
             if (user_agent.contains(keyword) ||
                     user_agent.contains(keyword.toLowerCase()) ||
                     user_agent.contains(keyword.toUpperCase()))
-                redirect("http://m.webube.com");
+            {
+                if (isWebkit)
+                    redirect("http://m.webube.com");
+            }
         }
-
     }
 
 
