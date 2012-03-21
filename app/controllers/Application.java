@@ -1,13 +1,9 @@
 package controllers;
 
-import nl.bitwalker.useragentutils.BrowserType;
-import nl.bitwalker.useragentutils.Manufacturer;
-import nl.bitwalker.useragentutils.OperatingSystem;
-import nl.bitwalker.useragentutils.UserAgent;
+
 import play.*;
 import play.mvc.*;
 
-import java.util.ArrayList;
 
 
 public class Application extends Controller {
