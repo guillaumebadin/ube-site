@@ -9,8 +9,15 @@
     <!-- <link rel="apple-touch-icon" href="public/images/touch-icon.png" />  -->
 
     <script type="text/javascript" src="http://c861891.r91.cf3.rackcdn.com/webube.mobile.util_v2.js"></script>
+
     <script type="text/javascript">
         // We test the device
+
+        if (!UbeMobUtil.isWebkit)
+        {
+            document.location.href = "http://webube.com";
+        }
+
         if (UbeMobUtil.isIPhone) {
             UbeMobUtil.loadCss("http://c861891.r91.cf3.rackcdn.com/ubeHigh_v3.css");
         } else if (UbeMobUtil.isAndroid) {
