@@ -20,11 +20,13 @@
 <html>
 <!-- <![endif]-->
 <head>
+
+
     <title>#{get 'title' /}</title>
     <meta charset="${_response_encoding}">
-    <link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}" />
+    <link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}"/>
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
     <meta name="google-site-verification" content="swcB75hGfi1gkvkbgdeHv6zXyi2Tay4MN9eHfvnm0bY"/>
     <meta name="description" content="#{get 'description' /}">
@@ -32,10 +34,10 @@
 
 
 
-    *{<link href='http://fonts.googleapis.com/css?family=Share:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>}*
-    *{<link href='http://fonts.googleapis.com/css?family=Voces&subset=latin,latin-ext' rel='stylesheet' type='text/css'>}*
-    *{<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>}*
-    *{<link href='http://fonts.googleapis.com/css?family=Exo:400,500,600,700,800,900,500italic,600italic,400italic,700italic,800italic,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>}*
+*{<link href='http://fonts.googleapis.com/css?family=Share:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>}*
+*{<link href='http://fonts.googleapis.com/css?family=Voces&subset=latin,latin-ext' rel='stylesheet' type='text/css'>}*
+*{<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>}*
+*{<link href='http://fonts.googleapis.com/css?family=Exo:400,500,600,700,800,900,500italic,600italic,400italic,700italic,800italic,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>}*
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -66,7 +68,7 @@
 *{<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"}*
 *{charset="${_response_encoding}"></script>}*
 
-<script src="@{'public/javascripts/jquery-1.7.1.min.js'}" type="text/javascript"></script>
+    <script src="@{'public/javascripts/jquery-1.7.1.min.js'}" type="text/javascript"></script>
 
 #{get 'moreScripts' /}
 
@@ -74,14 +76,14 @@
 
         :focus {
             -moz-outline-style: none;
-            outline-style:none;
+            outline-style: none;
         }
 
         :-moz-any-link:focus {
             outline: none;
         }
 
-        a,a:hover, a:active, a:focus {
+        a, a:hover, a:active, a:focus {
             outline: 0;
         }
 
@@ -103,7 +105,14 @@
             s.parentNode.insertBefore(ga, s);
         })();
 
+
+
     </script>
+
+
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 
 </head>
 
@@ -142,7 +151,8 @@
                     <li><a href="@{Application.company()}" data-link="company">Société</a></li>
                     <li><a href="@{Application.reference()}" data-link="reference">Références</a></li>
                     <li><a href="@{Application.contact()}" data-link="contact">Contacts</a></li>
-                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix<span class="super">©</span></strong></a></li>
+                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix<span
+                            class="super">©</span></strong></a></li>
                 </ul>
 
             </div>
@@ -237,6 +247,11 @@
 
 
 
+<script type="text/javascript">
+    var options = { "publisher":"ur-590abfb7-b6ca-8116-15b4-cc47937ced1b", "position":"right", "ad":{ "visible":false, "openDelay":5, "closeDelay":0}, "chicklets":{ "items":["facebook", "twitter", "google", "pinterest", "linkedin", "viadeo", "tumblr", "email"]}};
+    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+
 
 <script type="text/javascript">
 
@@ -326,6 +341,12 @@
 
 
 </script>
+
+<script>
+    var options={ "publisher": "fe3e8a57-01d3-47f1-b3c3-3df1d016d9ad", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "google", "pinterest", "linkedin", "viadeo", "tumblr", "email"]}};
+    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+
 
 </body>
 </html>
