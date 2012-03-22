@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head><title>Ancien navigateur détecté</title></head>
+<body>
+
+
+<style type="text/css">
+
+    .msgText {
+    text-align: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 23px;
+    }
+
+    .link {
+        text-decoration:none;
+        position: relative;
+    }
+
+    #firefoxLink {
+      left : -60px;
+    }
+
+    #chromeLink {
+        left : -15px;
+    }
+
+    #safariLink {
+        left : 38px;
+    }
+
+    #operaLink {
+        left : 90px;
+    }
+
+    #explorerLink {
+        left : 112px;
+    }
+
+</style>
+
+    <div>
+        <img style="display: block; margin: auto;" src="@{'/public/images/logo-acceuil-ie6.jpg'}" alt="logoWebube">
+    </div>
+    <br />
+
+<div class="msgText" style='font-weight: bold; margin-top: 12px;'>Vous utilisez un navigateur dépassé
+    depuis près de 8 ans!
+</div>
+<div class="msgText">Pour une meilleure expérience web, prenez
+    le temps de mettre à jour votre navigateur. <br />
+    Afin de pouvoir profiter de toutes les fonctionnalités de notre site,
+    nous vous recommandons d'utiliser une navigateur plus récent et plus sécurisé.
+
+    <p style="color: blue; "> Nous vous conceillons de télécharger : </p>
+    
+    <a class="link" id="firefoxLink" target="_blank" href="http://www.mozilla.org/fr/firefox/fx/"> Firefox </a>
+    <a class="link" id="chromeLink" target="_blank" href="https://www.google.com/chrome"> Chrome </a>
+    <a class="link" id="safariLink" target="_blank" href="http://www.apple.com/safari/"> Safari </a>
+    <a class="link" id="operaLink" target="_blank" href="http://www.opera.com/download/"> Opéra </a>
+    <a class="link" id="explorerLink" target="_blank" href="http://windows.microsoft.com/fr-FR/internet-explorer/products/ie/home"> Internet Explorer </a>
+    <br />
+    <img style="display: block; margin: auto;" src="@{'/public/images/multiBrowser.jpg'}" alt="allBrowser">
+
+</div>
+
+</body>
+</html>

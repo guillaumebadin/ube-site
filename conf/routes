@@ -32,6 +32,7 @@ GET     /public/                                staticDir:public
 *       /contact                                Application.contact
 *       /projet-phoenix                         Application.phoenixProject
 *       /mobile-app                             Application.mobileApp
+*       /ie6                                    Application.explorerSix
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

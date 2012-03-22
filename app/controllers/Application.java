@@ -76,4 +76,8 @@ public class Application extends Controller {
         renderTemplate("Application/eagle-technology.html");
     }
 
+    public static void explorerSix() {
+        renderTemplate("Application/ie6.html");
+    }
+
 }
