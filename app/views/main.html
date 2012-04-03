@@ -102,7 +102,6 @@
         })();
 
 
-
     </script>
 
 
@@ -283,13 +282,14 @@
         });
     };
 
+
     'use strict';
     $(document).ready(function () {
 
         UbeMenu.updateMenu('selected');
         UbeMenu.applyDataUbeLink('selected');
 
-//        sendMessage();
+        // sendMessage();
 
         UBE_AJAX.loadPageOfUrl('@{Application.webApp()}',
                 '#webApp');
