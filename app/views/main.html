@@ -26,12 +26,11 @@
     <meta charset="${_response_encoding}">
     <link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
 
     <meta name="google-site-verification" content="swcB75hGfi1gkvkbgdeHv6zXyi2Tay4MN9eHfvnm0bY"/>
     <meta name="description" content="#{get 'description' /}">
     <meta name="author" content="#{get 'author' /}">
-
 
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -105,15 +104,13 @@
     </script>
 
 
-    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript">var switchTo5x = true;</script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 
 </head>
 
-
-<body>
-
+<body onmouseover="posMouse(event);">
 
 <noscript>
 
@@ -154,7 +151,6 @@
         </div>
 
     </div>
-
 </header>
 
 <div id="main-content" class="container">
@@ -167,6 +163,32 @@
 <!-- /container -->
 
 <footer>
+    <div id="mini_footer_fix" style="visibility: hidden;">
+        <div class="" style="padding-top: 15px; margin-left: 500px;">
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style ">
+                <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                <a class="addthis_button_tweet"></a>
+                <a id="googleplusfix" style="display: none;" class="googleplus addthis_button_google_plusone"
+                   g:plusone:size="medium"></a>
+                <a style="display: none;" class="addthis_counter addthis_pill_style"></a>
+            </div>
+            <!-- AddThis Button END -->
+        </div>
+    </div>
+
+    <div id="mini_footer" class="locked">
+        <div class="" style="margin: auto; padding-top: 15px; margin-left: 500px;">
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style ">
+                <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                <a class="addthis_button_tweet"></a>
+                <a id="googleplus" class="googleplus addthis_button_google_plusone" g:plusone:size="medium"></a>
+                <a class="addthis_counter addthis_pill_style"></a>
+            </div>
+            <!-- AddThis Button END -->
+        </div>
+    </div>
 
     <div class="container">
 
@@ -223,6 +245,7 @@
 
 #{if play.mode.dev}
 
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f7d5c475c99d088"></script>
 <script type="text/javascript" src="@{'/public/javascripts/after/jquery.placeholder.js'}"></script>
 <script type="text/javascript" src="@{'/public/javascripts/after/jquery.history.js'}"></script>
 <script type="text/javascript" src="@{'/public/javascripts/after/webube.util.js'}"></script>
@@ -239,8 +262,6 @@
 <script type="text/javascript" src="@{'/public/javascripts/after/bootstrap-modal-1.4.js'}"></script>
 
 #{/else}
-
-
 
 <script type="text/javascript">
     var options = { "publisher":"ur-590abfb7-b6ca-8116-15b4-cc47937ced1b", "position":"right", "ad":{ "visible":false, "openDelay":5, "closeDelay":0}, "chicklets":{ "items":["facebook", "twitter", "google", "pinterest", "linkedin", "viadeo", "tumblr", "email"]}};
@@ -336,11 +357,27 @@
 
 </script>
 
-<script>
-    var options={ "publisher": "fe3e8a57-01d3-47f1-b3c3-3df1d016d9ad", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "pinterest", "linkedin", "viadeo", "tumblr", "email"]}};
-    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-</script>
+<style>
 
+    div#mini_footer {
+        z-index: 100;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        visibility: visible;
+    }
+
+    div#mini_footer_fix {
+        margin-top: -17px;
+        bottom: 0;
+        z-index: 100;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        visibility: visible;
+    }
+</style>
 
 </body>
 </html>

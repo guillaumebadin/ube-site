@@ -194,8 +194,10 @@ header {
     #index {
 
         min-height: 600px;
+        overflow-x: hidden;
         position: relative;
         left: -20px;
+        z-index : 1;
 
         #presentation {
 
@@ -683,10 +685,40 @@ footer {
         }
 
 
+    .addthis_pill_style {
+        display: none !important;
+    }
+
+    .locked
+    {
+        position: fixed;
+    }
+
+    .googleplus {
+        margin-left: -20px;
+    }
+
+    #mini_footer
+    {
+        background-image: url("../images/footer_line.png");
+        background-repeat: repeat-x;
+        height: 50px;
+        width: 100%;
+    }
+
+    #mini_footer_fix
+    {
+        background-image: url("../images/footer_line.png");
+        background-repeat: repeat-x;
+        height: 50px;
+        width: 100%;
+    }
+
     #copyright {
         font-size:@baseline;
         text-align:center;
     }
+
 }
 
 
