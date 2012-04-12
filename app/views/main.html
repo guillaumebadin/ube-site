@@ -164,21 +164,67 @@
 
 <footer>
     <div id="mini_footer_fix" style="visibility: hidden;">
-        <div class="" style="padding-top: 15px; margin-left: 500px;">
+    *{<div style="padding-top: 15px; margin-left: 500px;">}*
+
+    *{<div style="margin-left: 500px;">}*
+
+        <div class="rejoindre">
+            <h2> Nous rejoindre : </h2>
+        </div>
+
+        *{<div class="shareBar">}*
+            *{<!-- AddThis Button BEGIN -->}*
+            *{<div class="addthis_toolbox addthis_default_style ">}*
+                *{<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>}*
+                *{<a class="addthis_button_tweet"></a>}*
+                *{<a id="googleplusfix" style="display: none;" class="googleplus addthis_button_google_plusone"}*
+                   *{g:plusone:size="medium"></a>}*
+                *{<a style="display: none;" class="addthis_counter addthis_pill_style"></a>}*
+
+            *{<div style="width: 220px; height: 40px; float : right;">}*
+            *{<div class="logo-home">}*
+            *{<a title="Acceuil" class="logo" href="index.html">acceuil </a>}*
+            *{<a href="@{Application.index()}"><img src="@{'public/images/logo_accueuil_bar.png'}" alt="accueil-bar"> </a>}*
+            *{</div>}*
+            *{<div class="logo-up">}*
+            *{<a title="Haut de la page" class="logo-up" href="index.html#top-index">up-page </a>}*
+            *{<a href="@{Application.index()#top-index}"><img style="width: 80px; height: 80px;" src="public/images/fleche_haut.png" alt="up"></a>}*
+            *{<a href="index.html#impress"><img style="width: 80px; height: 80px;" src="@{'public/images/fleche_haut.png'}" alt="up"></a>}*
+            *{</div>}*
+            *{</div>}*
+            *{</div>}*
+            *{<!-- AddThis Button END -->}*
+        *{</div>}*
+
+        <div style="margin-left: 500px; margin-top: -20px">
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style ">
                 <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
                 <a class="addthis_button_tweet"></a>
                 <a id="googleplusfix" style="display: none;" class="googleplus addthis_button_google_plusone"
-                   g:plusone:size="medium"></a>
-                <a style="display: none;" class="addthis_counter addthis_pill_style"></a>
+                <a class="addthis_counter addthis_pill_style"></a>
             </div>
             <!-- AddThis Button END -->
         </div>
+
+        <div class="rightBarIndexHome">
+            <a href="@{Application.index()}"><img src="@{'public/images/logo_accueuil_bar.png'}" alt="accueil-bar"> </a>
+        </div>
+        <div class="rightBarIndexUp">
+            <a href="index.html#impress"><img style="width: 80px; height: 80px;"
+                                              src="@{'public/images/fleche_haut.png'}" alt="up"></a>
+        </div>
+
     </div>
 
     <div id="mini_footer" class="locked">
-        <div class="" style="margin: auto; padding-top: 15px; margin-left: 500px;">
+    *{<div style="margin: auto; padding-top: 15px; margin-left: 500px;">}*
+
+        <div class="rejoindre">
+            <h2> Nous rejoindre : </h2>
+        </div>
+
+        <div style="margin-left: 500px; margin-top: -20px">
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style ">
                 <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -188,6 +234,15 @@
             </div>
             <!-- AddThis Button END -->
         </div>
+
+        <div class="rightBarIndexHome">
+            <a href="@{Application.index()}"><img src="@{'public/images/logo_accueuil_bar.png'}" alt="accueil-bar"> </a>
+        </div>
+        <div class="rightBarIndexUp">
+            <a href="index.html#impress"><img style="width: 80px; height: 80px;"
+                                              src="@{'public/images/fleche_haut.png'}" alt="up"></a>
+        </div>
+
     </div>
 
     <div class="container">
