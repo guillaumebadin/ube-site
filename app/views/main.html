@@ -110,7 +110,7 @@
 
 </head>
 
-<body onmouseover="posMouse(event);">
+<body>
 
 <noscript>
 
@@ -124,7 +124,7 @@
 
 <header>
 
-    <div class="container" id="impress" class="impress-not-supported">
+    <div class="container movedHeader">
 
         <div class="row">
             <div id="logo-header" class="span3">
@@ -135,26 +135,40 @@
             </div>
 
             <!--Mobile Atelier digital Société Références Contacts App-Ocalypse-->
-            <div style="position:relative;">
-
+            <div id="link-header">
                 <ul>
                     <li><a href="@{Application.webApp()}" data-link="webApp">WebApp</a></li>
                     <li><a href="@{Application.webSite()}" data-link="webSite">Site Internet</a></li>
                     <li><a href="@{Application.company()}" data-link="company">Société</a></li>
                     <li><a href="@{Application.reference()}" data-link="reference">Références</a></li>
                     <li><a href="@{Application.contact()}" data-link="contact">Contacts</a></li>
-                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet Phoenix<span
-                            class="super">©</span></strong></a></li>
+                    <li><a href="@{Application.phoenixProject()}" data-link="phoenixProject"><strong>Projet
+                        Phoenix<span
+                                class="super">©</span></strong></a></li>
                 </ul>
 
             </div>
         </div>
 
+        <div class="shareMenu">
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style ">
+                *{<a class="addthis_button_facebook_like" fb:like:layout="button_count""></a>}*
+                <div id="fblike">
+                     <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                </div>
+                <a class="addthis_button_tweet"  tw:count="none"></a>
+                <a class="addthis_button_google_plusone" g:plusone:size="medium" g:plusone:count="false"></a>
+                <a class="addthis_counter addthis_pill_style"></a>
+            </div>
+            <!-- AddThis Button END -->
+            *{<div class="fb-like" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false"></div>}*
+        </div>
     </div>
+
 </header>
 
 <div id="main-content" class="container">
-
 
 #{doLayout /}
 
@@ -163,32 +177,6 @@
 <!-- /container -->
 
 <footer>
-    <div id="mini_footer_fix" style="visibility: hidden;">
-        <div class="" style="padding-top: 15px; margin-left: 500px;">
-            <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style ">
-                <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                <a class="addthis_button_tweet"></a>
-                <a id="googleplusfix" style="display: none;" class="googleplus addthis_button_google_plusone"
-                   g:plusone:size="medium"></a>
-                <a style="display: none;" class="addthis_counter addthis_pill_style"></a>
-            </div>
-            <!-- AddThis Button END -->
-        </div>
-    </div>
-
-    <div id="mini_footer" class="locked">
-        <div class="" style="margin: auto; padding-top: 15px; margin-left: 500px;">
-            <!-- AddThis Button BEGIN -->
-            <div class="addthis_toolbox addthis_default_style ">
-                <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                <a class="addthis_button_tweet"></a>
-                <a id="googleplus" class="googleplus addthis_button_google_plusone" g:plusone:size="medium"></a>
-                <a class="addthis_counter addthis_pill_style"></a>
-            </div>
-            <!-- AddThis Button END -->
-        </div>
-    </div>
 
     <div class="container">
 
@@ -245,7 +233,6 @@
 
 #{if play.mode.dev}
 
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f7d5c475c99d088"></script>
 <script type="text/javascript" src="@{'/public/javascripts/after/jquery.placeholder.js'}"></script>
 <script type="text/javascript" src="@{'/public/javascripts/after/jquery.history.js'}"></script>
 <script type="text/javascript" src="@{'/public/javascripts/after/webube.util.js'}"></script>
@@ -263,11 +250,16 @@
 
 #{/else}
 
-<script type="text/javascript">
-    var options = { "publisher":"ur-590abfb7-b6ca-8116-15b4-cc47937ced1b", "position":"right", "ad":{ "visible":false, "openDelay":5, "closeDelay":0}, "chicklets":{ "items":["facebook", "twitter", "google", "pinterest", "linkedin", "viadeo", "tumblr", "email"]}};
-    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f7d5c475c99d088"></script>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=311300592242398";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <script type="text/javascript">
 
@@ -356,28 +348,6 @@
     });
 
 </script>
-
-<style>
-
-    div#mini_footer {
-        z-index: 100;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        visibility: visible;
-    }
-
-    div#mini_footer_fix {
-        margin-top: -17px;
-        bottom: 0;
-        z-index: 100;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        visibility: visible;
-    }
-</style>
 
 </body>
 </html>
