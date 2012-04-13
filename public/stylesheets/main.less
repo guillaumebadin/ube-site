@@ -159,110 +159,67 @@ header {
         right: 0;
         top:32px;
 
->li {
-     display: inline-block;
-     a:hover,a.selected { color: @mainH1ColorLighten; .CustomLighten;}
- }
+     >li {
+        display: inline-block;
+        a:hover,a.selected { color: @mainH1ColorLighten; .CustomLighten;}
+     }
 
-li + li {
-    margin-left: 20px;
-}
+     li + li {
+         margin-left: 20px;
+     }
 
-a {
+    a {
 
-    color: @mainH1Color;
-    font-size: @basefont + 4px;}
+        color: @mainH1Color;
+        font-size: @basefont + 4px;}
+        }
+
+    .shareMenu {
+        position: relative;
+        top : -51px;
+        left : 834px;
     }
 
-.shareMenu {
-    position: relative;
-    top : -30px;
-    left : 780px;
-}
-
-.addthis_pill_style {
-    visibility: hidden !important;
-    display: none !important;
-    margin-left: -50px !important;
-}
-
-.addthis_button_google_plusone {
-//        margin-left: 45px;
-    position: relative;
-    top : 0px !important;
-    left : 2px !important;
-    overflow-x: hidden !important;
-}
-
-#fblike .fb_edge_comment_widget iframe {
-    padding: 2px 5px !important;
-}
-
-.fb_edge_widget_with_comment iframe
-{
-    width:49px !important;
-}
-
-
-
-position : fixed;
-z-index: 1000;
-
+    .addthis_pill_style {
+        visibility: hidden !important;
+        display: none !important;
+        margin-left: -50px !important;
     }
 
-//// Header
-//header {
-//    /*background-image: url("../images/header_line.png");*/
-//    /*background-repeat: repeat-x;*/
-////    #gradient > .vertical-three-colors(@gray,@gray,1%,@black);
-//
-//    .gradientBar(@black,@gray);
-//    border-bottom:2px solid @mainH1Color;
-//
-//
-//
-//    position: absolute;
-//    top:0;
-//    left: 0;
-//    right: 0;
-//    height: 74px;
-//
-//    div.container {
-//        height: 74px;
-//        width: 100%;
-//        position: fixed;
-//        z-index: 10;
-//        margin-top: 0;
-//        .gradientBar(@black,@gray);
-//        border-bottom:2px solid @mainH1Color;
-//    }
-//
-////    #logo-header { position: relative;top:4px;left:28px;margin-left: 0;}
-//    #logo-header { position: relative;top:4px;left:180px;margin-left: 0;}
-//
-//    position:relative;
-//    ul {
-//
-//        position:absolute;
-//        right: 0;
-//        top:32px;
-//
-//        >li {
-//        display: inline-block;
-//            a:hover,a.selected { color: @mainH1ColorLighten; .CustomLighten;}
-//        }
-//
-//        li + li {
-//            margin-left: 20px;
-//        }
-//
-//        a {
-//
-//            color: @mainH1Color;
-//            font-size: @basefont + 4px;}
-//    }
-//
-//}
+    .addthis_button_google_plusone {
+        //        margin-left: 45px;
+        position: relative;
+        top : 0px !important;
+        left : 2px !important;
+        overflow-x: hidden !important;
+    }
+
+    #fblike {
+        position: relative;
+        top : -31px;
+        left : 780px;
+    }
+    //
+    //#fblike .fb_edge_comment_widget iframe {
+    //    padding: 2px 5px !important;
+    //}
+    //
+    //#fblike a.connect_widget_like_button iframe{
+    //    padding: 2px 5px !important;
+    //}
+    //
+
+    .fb_edge_widget_with_comment iframe
+    {
+        width:49px !important;
+        height: 20px !important;
+        border-radius: 3px !important;
+    }
+
+    position : fixed;
+    z-index: 1000;
+
+}
 
 // This is the main place
 
@@ -776,85 +733,9 @@ footer {
         margin-bottom: 0;
     }
 
-    .addthis_pill_style {
-        visibility: hidden !important;
-        display: none !important;
-    }
-
-    .locked
-    {
-        position: fixed;
-    }
-
-    .googleplus {
-        margin-left: -20px;
-    }
-
-    #mini_footer
-    {
-    //        background-image: url("../images/footer_line.png");
-        background-image: url("../images/footer_line2.jpg");
-        background-repeat: repeat-x;
-        height: 50px;
-        width: 100%;
-    }
-
-    #mini_footer_fix
-    {
-    //        background-image: url("../images/footer_line.png");
-        background-image: url("../images/footer_line3.jpg");
-        background-repeat: repeat-x;
-        height: 50px;
-        width: 100%;
-    }
-
     #copyright {
         font-size:@baseline;
         text-align:center;
-    }
-
-//    .logo-home {
-//        display: block;
-//        float : left;
-//        margin-right: 100px;
-//        margin-top: -7px;
-//    }
-
-//    .logo-up {
-//        display: block;
-//        float: right;
-//        margin-right: 60px;
-//        margin-top: -15px;
-//    }
-
-    .sharBar {
-    //        display: block;
-    //        position: relative;
-        margin-left: 500px !important;
-    }
-
-    .rejoindre {
-        display: block;
-        position: relative;
-        left : 250px;
-        top : 5px;
-        width: 170px;
-    }
-
-    .rightBarIndexHome {
-        display: block;
-        position: relative;
-        left : 900px;
-        top : -38px;
-        width: 170px;
-    }
-
-    .rightBarIndexUp {
-        display: block;
-        position: relative;
-        left : 980px;
-        top : -98px;
-        width: 170px;
     }
 
 }

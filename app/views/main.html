@@ -150,13 +150,25 @@
             </div>
         </div>
 
+        <div id="fblike">
+            <div class="fb-like" data-href="http://www.facebook.com/pages/WebUbe/150890198303430"
+                 data-send="false" data-width="450" data-height="70" data-show-faces="false" data-font="arial"></div>
+        </div>
+
+
+        *{<script> document.getElementById("LikePluginPagelet").style.width = "60px"; </script>}*
+
+
         <div class="shareMenu">
             <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style ">
             *{<a class="addthis_button_facebook_like" fb:like:layout="button_count""></a>}*
-                <div id="fblike">
-                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                </div>
+
+
+
+                *{<div id="fblike">}*
+                    *{<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>}*
+                *{</div>}*
                 <a class="addthis_button_tweet"  tw:count="none"></a>
                 <a class="addthis_button_google_plusone" g:plusone:size="medium" g:plusone:count="false"></a>
                 <a class="addthis_counter addthis_pill_style"></a>
