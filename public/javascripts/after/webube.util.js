@@ -393,34 +393,3 @@ var _UbeUtil = (function () {
 
 })();
 
-function posMouse(event) {
-    var p_nav_bar = $("#mini_footer");
-    var p_nav_bar_fix = $("#mini_footer_fix");
-    var position_navbar = p_nav_bar.position();
-    var position_navbar_fix = p_nav_bar_fix.position();
-
-    var heightScreen = jQuery(document).height();
-    var pageHeight = document.body.offsetHeight;
-
-
-    var elem = document.getElementById('mini_footer');
-    var elem_fix = document.getElementById('mini_footer_fix');
-    var googleplus = document.getElementById('googleplus');
-    var googleplusfix = document.getElementById('googleplusfix');
-
-    if (position_navbar.top > position_navbar_fix.top)
-    {
-        elem.style.visibility = "hidden";
-        elem_fix.style.visibility = "visible";
-        googleplusfix.style.display = "block";
-        googleplus.style.display = "none";
-    }
-    else {
-        elem_fix.style.visibility = "hidden";
-        elem.style.visibility = "visible";
-        googleplusfix.style.display = "none";
-        googleplus.style.display = "block";
-    }
-}
-
-$(window).bind('scroll', posMouse);

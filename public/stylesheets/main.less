@@ -7,6 +7,10 @@
 
 // General
 
+.underHeader {
+    padding-top: 74px;
+}
+
 .center {
     display: block;
     margin: auto;
@@ -72,6 +76,8 @@ h1,h2,h3,h4, a {
 
 
 body {
+
+//    padding-top: 74px;
     background-color: #f5f5f5;
     overflow-x: hidden;
 }
@@ -141,6 +147,10 @@ header {
     left: 0;
     right: 0;
     height: 74px;
+
+    .container {
+//        height: 74px;
+    }
 
     div.container {
     //        position: fixed;
@@ -219,7 +229,7 @@ header {
     position : fixed;
     z-index: 1000;
 
-}
+    }
 
 // This is the main place
 
@@ -232,7 +242,8 @@ header {
 
 #main-content {
 
-    padding-top: 74px;
+//    padding-top: 74px;
+//    margin-top: 74px;
     background-color:#f5f5f5;
     min-height: 600px;
 
@@ -494,6 +505,13 @@ header {
             text-align: left;
         }
 
+        #labelRight {
+//            display: block;
+            position: absolute;
+            top : -20px;
+            left : 843px;
+        }
+
         #qualityIllustration {
             margin-right: 82px;
         }
@@ -509,11 +527,17 @@ header {
         .companyRow + .companyRow {
             margin-top: 50px;
         }
-        .companyRow {
+//
+//        .companyRow {
+//
+//            .clearfix();
+//            p{float: left;max-width: 50%;}
+//            img {float: right; margin-right: 96px;}
+//        }
 
-            .clearfix();
-            p{float: left;max-width: 50%;}
-            img {float: right; margin-right: 96px;}
+        .blockLeft {
+            float : left;
+            width: 380px;
         }
 
     }
@@ -582,6 +606,22 @@ header {
                 background-color:lighten(@ubeGray,10%);
             }
         }
+
+       #yakadeal {
+           margin-top: -74px;
+
+       }
+
+
+
+        .padddingRef {
+            padding-top: 74px;
+        }
+
+        .marginRef {
+            margin-top: -24px;
+        }
+
     }
 
     #cloud {
