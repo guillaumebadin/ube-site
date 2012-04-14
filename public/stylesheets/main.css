@@ -2586,6 +2586,9 @@ input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
+.underHeader {
+  padding-top: 74px;
+}
 .center {
   display: block;
   margin: auto;
@@ -2641,6 +2644,7 @@ a {
 }
 body {
   background-color: #f5f5f5;
+  overflow-x: hidden;
 }
 .OrangeTextShadow {
   text-shadow: #233133 -1px -1px 1px;
@@ -2706,6 +2710,8 @@ header {
   right: 0;
   height: 74px;
   position: relative;
+  position: fixed;
+  z-index: 1000;
 }
 header div.container {
   margin-top: 0;
@@ -2714,6 +2720,12 @@ header #logo-header {
   position: relative;
   top: 4px;
   left: 28px;
+  margin-left: 0;
+}
+header #link-header {
+  position: relative;
+  top: 4px;
+  left: -195px;
   margin-left: 0;
 }
 header ul {
@@ -2736,6 +2748,32 @@ header ul a {
   color: #f58220;
   font-size: 18px;
 }
+header .shareMenu {
+  position: relative;
+  top: -51px;
+  left: 834px;
+}
+header .addthis_pill_style {
+  visibility: hidden !important;
+  display: none !important;
+  margin-left: -50px !important;
+}
+header .addthis_button_google_plusone {
+  position: relative;
+  top: 0px !important;
+  left: 2px !important;
+  overflow-x: hidden !important;
+}
+header #fblike {
+  position: relative;
+  top: -31px;
+  left: 780px;
+}
+header .fb_edge_widget_with_comment iframe {
+  width: 49px !important;
+  height: 20px !important;
+  border-radius: 3px !important;
+}
 .left {
   float: left;
 }
@@ -2748,6 +2786,68 @@ header ul a {
 #main-content {
   background-color: #f5f5f5;
   min-height: 600px;
+  /*#appFacebook {*/
+
+  /*.block {*/
+
+  /*#logo-phoenixbox {*/
+
+  /*background-image: url("http://c1663920.r20.cf2.rackcdn.com/PhoenixBoxLogoFinalSite.png");*/
+
+  /*width : 600px;*/
+
+  /*height: 324px;*/
+
+  /*margin: auto;*/
+
+  /*margin-left: 170px;*/
+
+  /*margin-top: 20px;*/
+
+  /*}*/
+
+  /*.object-video {*/
+
+  /*width:560px;*/
+
+  /*height:385px;*/
+
+  /*align: center;*/
+
+  /*margin-left: 180px;*/
+
+  /*}*/
+
+  /*.info-left {*/
+
+  /*float: left;*/
+
+  /*width: 450px;*/
+
+  /*height: 130px;*/
+
+  /*}*/
+
+  /*.info-right {*/
+
+  /*float: right;*/
+
+  /*width: 450px;*/
+
+  /*height: 130px;*/
+
+  /*}*/
+
+  /*}*/
+
+  /*.contact-center p {*/
+
+  /*text-align: center;*/
+
+  /*}*/
+
+  /*}*/
+
 }
 #main-content p,
 #main-content li {
@@ -2758,8 +2858,10 @@ header ul a {
 }
 #main-content #index {
   min-height: 600px;
+  overflow-x: hidden;
   position: relative;
   left: -20px;
+  z-index: 1;
 }
 #main-content #index #presentation {
   margin: 0 28px;
@@ -2772,7 +2874,7 @@ header ul a {
   line-height: 30px;
 }
 #main-content #index #slider {
-  background-image: url("http://c1663920.r20.cf2.rackcdn.com/fond_carrousel.png");
+  background-image: url("http://c862609.r9.cf3.rackcdn.com/fond_carrousel.png");
   width: 1000px;
   height: 500px;
   background-repeat: no-repeat;
@@ -2936,6 +3038,11 @@ header ul a {
 #main-content #company h1 {
   text-align: left;
 }
+#main-content #company #labelRight {
+  position: absolute;
+  top: -20px;
+  left: 843px;
+}
 #main-content #company #qualityIllustration {
   margin-right: 82px;
 }
@@ -2948,25 +3055,9 @@ header ul a {
 #main-content #company .companyRow + .companyRow {
   margin-top: 50px;
 }
-#main-content #company .companyRow {
-  zoom: 1;
-}
-#main-content #company .companyRow:before,
-#main-content #company .companyRow:after {
-  display: table;
-  content: "";
-  zoom: 1;
-}
-#main-content #company .companyRow:after {
-  clear: both;
-}
-#main-content #company .companyRow p {
+#main-content #company .blockLeft {
   float: left;
-  max-width: 50%;
-}
-#main-content #company .companyRow img {
-  float: right;
-  margin-right: 96px;
+  width: 380px;
 }
 #main-content #contact li > p {
   display: inline;
@@ -3010,6 +3101,15 @@ header ul a {
   top: 4px;
   background-color: #656567;
 }
+#main-content #reference #yakadeal {
+  margin-top: -74px;
+}
+#main-content #reference .padddingRef {
+  padding-top: 74px;
+}
+#main-content #reference .marginRef {
+  margin-top: -24px;
+}
 #main-content #cloud img {
   float: left;
   margin-right: 30px;
@@ -3049,33 +3149,6 @@ header ul a {
   display: block;
   margin-left: 250px;
 }
-#main-content #appFacebook .block #logo-phoenixbox {
-  background-image: url("http://c1663920.r20.cf2.rackcdn.com/PhoenixBoxLogoFinalSite.png");
-  width: 600px;
-  height: 324px;
-  margin: auto;
-  margin-left: 170px;
-  margin-top: 20px;
-}
-#main-content #appFacebook .block .object-video {
-  width: 560px;
-  height: 385px;
-  align: center;
-  margin-left: 180px;
-}
-#main-content #appFacebook .block .info-left {
-  float: left;
-  width: 450px;
-  height: 130px;
-}
-#main-content #appFacebook .block .info-right {
-  float: right;
-  width: 450px;
-  height: 130px;
-}
-#main-content #appFacebook .contact-center p {
-  text-align: center;
-}
 /*Footer*/
 footer {
   border-top: 2px solid #f58220 !important;
@@ -3105,7 +3178,7 @@ footer h4:hover {
 footer #footer_link {
   padding: 10px 0 40px 0;
   position: relative;
-  left: 8px;
+  left: 55px;
 }
 footer #footer_link li,
 footer #footer_link ol,
@@ -3377,9 +3450,6 @@ a.web-page {
   /*text-align: left;*/
 
   list-style: inside;
-}
-#main-content .block + .block {
-  margin-top: 50px;
 }
 #main-content #logo-fb-webube {
   background-image: url('../images/icontexto-inside-facebook.png');
