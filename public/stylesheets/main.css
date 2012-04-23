@@ -2768,6 +2768,8 @@ header #fblike {
   position: relative;
   top: -31px;
   left: 780px;
+  width: 50px;
+  height: 20px;
 }
 header .fb_edge_widget_with_comment iframe {
   width: 49px !important;

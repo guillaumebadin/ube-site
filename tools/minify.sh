@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-version="v11";
+version="v12";
 lessc='bin/less.js/bin/lessc';
 compressor="/usr/bin/java -jar bin/compiler.jar";
 yuicompressor="/usr/bin/java -jar bin/yuicompressor-2.4.7.jar"
