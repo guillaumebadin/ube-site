@@ -150,10 +150,10 @@ var UbeMenu = function () {
     }
 }();
 
-'use strict';
+
 var UBE_AJAX = (function () {
 
-
+    'use strict';
 
     /**
      * This method post a form via ajax.

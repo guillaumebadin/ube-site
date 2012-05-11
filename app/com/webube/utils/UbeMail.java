@@ -17,8 +17,6 @@ import play.libs.Mail;
 public class UbeMail {
 
 
-
-
     private final String senderLabel;
     private final String content;
     private final String recipient;
